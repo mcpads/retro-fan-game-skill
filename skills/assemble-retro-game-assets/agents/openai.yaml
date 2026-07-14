@@ -1,0 +1,4 @@
+interface:
+  display_name: "Assemble Retro Game Assets"
+  short_description: "Coordinate coherent retro-game asset sets"
+  default_prompt: "Use $assemble-retro-game-assets to map a coherent character, world, battle, cutscene, or interface asset set onto proven game surfaces."

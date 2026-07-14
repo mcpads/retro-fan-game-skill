@@ -1,0 +1,4 @@
+interface:
+  display_name: "Adapt Retro Game Narrative"
+  short_description: "Plan source-aware retro-game narratives"
+  default_prompt: "Use $adapt-retro-game-narrative to adapt, extend, or remix an existing narrative into a traceable retro fan-game plan."

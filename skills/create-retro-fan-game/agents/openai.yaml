@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create Retro Fan Game"
+  short_description: "Create personal retro fan-game workflows"
+  default_prompt: "Use $create-retro-fan-game to turn my retro-game idea into a private playable work from my own original without redistributing original assets."
