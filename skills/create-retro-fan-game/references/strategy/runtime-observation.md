@@ -18,9 +18,9 @@ sufficient evidence under [Capability Composition](composition.md).
 
 Use [Observation Records](../conventions/observation-records.md) for collection
 and [Claim Assessments](../conventions/claim-assessments.md) for interpretation.
-Check the loaded game against the selected build receipt before using a capture
-as evidence for current completion. Saved evidence can be reused when its input
-identities, route, and claim remain applicable.
+Verify the loaded output against its build receipt when collecting evidence.
+For reuse across builds, apply
+[Evidence From Another Build](../conventions/claim-assessments.md#evidence-from-another-build).
 
 ## Coverage Judgment
 

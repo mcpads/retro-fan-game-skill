@@ -26,8 +26,13 @@ For every included file or logical artifact, record:
   [Asset Distribution Policy](../strategy/asset-distribution-policy.md),
 - provenance record for newly authored or generated assets,
 - local transform or delta relationship for derived original assets,
-- dependency and deterministic build step,
+- dependencies and deterministic build step when consumed by the builder,
 - license or usage assumption when applicable.
+
+For previews, reference the source observation, export transform if any, supported
+claim, retained original context and why it is needed, and review result for the
+exact exports together. Apply
+[Preview Evidence](../strategy/asset-distribution-policy.md#preview-evidence).
 
 When insertion is in scope, point to the inserted-resource registry and its
 runtime evidence. When it is not in scope, omit that section rather than adding
@@ -59,6 +64,7 @@ the declared target.
 Repeat without the execution host and then without each required build source.
 Each build must fail closed before using a mismatched or missing input. The
 package may still expose its newly authored or generated material, metadata,
-and tooling, but it must not reconstruct meaningful original material from an
-omitted input. Record whether these missing-input checks satisfy the policy's
-Package Boundary; any violation fails the test.
+tooling, and permitted previews. Record whether these missing-input checks satisfy
+the policy's [Package Boundary](../strategy/asset-distribution-policy.md#package-boundary).
+Preview review is a separate content check; passing it does not waive a required
+build input or permit otherwise excluded assets. Any violation fails validation.

@@ -6,7 +6,8 @@ limits, and next action in a section of the narrative record.
 
 ## Readiness Profile
 
-Before producing source-constrained narrative content for the build, check:
+Before expanding source-constrained narrative production beyond a bounded
+sample or proof of concept, check the proposed scope and its dependencies:
 
 - scoped source and edition authority is explicit,
 - required causal and state transitions are reconstructed,
@@ -14,7 +15,7 @@ Before producing source-constrained narrative content for the build, check:
 - preservation invariants and intentional-change boundaries are declared,
 - source conflicts affecting the scope are resolved by established precedence
   or a human decision,
-- authored units and derivation relations cover the intended route,
+- planned units and derivation relations cover that scope,
 - required host bindings and domain dependencies are identified,
 - no comparison source or execution host was silently promoted to narrative
   authority.
@@ -22,7 +23,9 @@ Before producing source-constrained narrative content for the build, check:
 Record `pass`, `fail`, or `inconclusive`, scope, evidence references, limits,
 and blocked downstream decisions.
 Unresolved alternatives may remain only where they cannot invalidate the proposed
-expansion. Use provisional samples to settle relevant creative conflicts.
+expansion. Provisional samples and isolated in-game experiments may resolve these
+gaps before readiness passes, under the project's experimental execution checks.
+They do not establish readiness for broader production or waive completion claims.
 
 ## Conformance Profile
 

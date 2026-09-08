@@ -63,6 +63,8 @@ build, or depend on a transient cache.
 When evidence or intent changes, follow dependencies to affected facts, builds,
 and assessments. Mark conclusions that no longer apply as invalid before further
 adoption or completion decisions; preserve unrelated proof.
+Applying runtime evidence to a different build requires the scoped comparison in
+[Claim Assessments](claim-assessments.md#evidence-from-another-build).
 
 Retain raw observations and historical outcomes. Correct or supersede the fact or
 assessment, record the reason and any replacement, then update the current entry

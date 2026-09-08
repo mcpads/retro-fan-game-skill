@@ -54,8 +54,8 @@ and its relationship to source claims. Host bindings locate authored units in
 the game; execution and observation record implementation and runtime evidence.
 
 Use [Narrative Assessment Profiles](../conventions/narrative-assessment-profiles.md)
-to judge readiness for the build and conformance for completion.
-Provisional samples may explore a relation before those assessments pass.
+to judge readiness for production expansion and conformance for completion.
+The readiness profile also defines how provisional work may resolve gaps.
 
 ## Review Meaning In Context
 

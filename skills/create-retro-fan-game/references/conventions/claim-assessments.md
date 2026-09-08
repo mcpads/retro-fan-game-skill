@@ -32,6 +32,24 @@ Reference independently identified inputs as applicable:
 
 Do not copy or rewrite raw evidence into the assessment.
 
+## Evidence From Another Build
+
+Raw observations remain tied to the build actually observed. To apply them to a
+different selected build, record a new scoped assessment referencing:
+
+- the original observation and both builds' receipts and output identities,
+- the complete output comparison and evidence that differences leave the claim's
+  runtime path and dependencies unchanged, including shared code, data, and layout,
+- confirmation that relevant observation conditions still hold, including runtime
+  configuration, starting state, and timing assumptions,
+- the supported route and behavior, remaining limits, and applicability decision.
+
+An unchanged source file or surface alone does not establish this: repacking or a
+shared loader change may alter its behavior. If dependencies are unknown or the
+comparison cannot rule out an effect, keep the claim open and observe the selected
+build. A passing assessment reuses evidence for that claim; it does not turn the
+old capture into an observation of the new build or extend route coverage.
+
 ## Interpretation And Promotion
 
 After evidence collection, record:

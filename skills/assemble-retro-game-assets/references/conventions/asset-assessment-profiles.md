@@ -6,10 +6,12 @@ limits, and next action in a section of the asset record.
 
 ## Readiness Profile
 
-Before producing an asset set for the build, check:
+Before expanding asset production beyond a bounded sample or proof of concept,
+check the proposed scope and its dependencies:
 
 - intended route and asset component have defined scope,
-- required semantic units, variants, states, and surfaces are inventoried,
+- required semantic units, variants, states, and surfaces in that scope are
+  inventoried,
 - source relationships and authority are explicit when adaptation is claimed,
 - continuity groups and intentional differences are declared,
 - every required host surface has a structure-proof reference or visible gap,
@@ -21,8 +23,10 @@ Before producing an asset set for the build, check:
 Record `pass`, `fail`, or `inconclusive`, scope, evidence references, limits,
 and blocked downstream decisions.
 A visible gap is not a passing result when it could invalidate the proposed
-production scope. Use a provisional sample or technical experiment to resolve
-the relevant gap; do not require full-set readiness before that exploration.
+production scope. Provisional samples and isolated in-game experiments may resolve
+these gaps before readiness passes, under the project's experimental execution
+checks. They do not establish readiness for broader production or waive completion
+claims.
 
 ## Completion Profiles
 

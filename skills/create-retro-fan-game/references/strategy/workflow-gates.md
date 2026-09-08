@@ -2,8 +2,8 @@
 
 These gates define when to run experiments, expand production, or claim completion.
 Evaluate only the relevant gate. A gate must allow the investigation needed to
-establish its evidence. Here, production means preparing content and transforms
-for the game build; provisional samples remain exploratory. Check that earlier
+establish its evidence. Production expansion goes beyond bounded samples or
+experiments, which may include isolated in-game builds. Check that earlier
 passes still apply under
 [Project State](../conventions/project-state.md#invalidation).
 
@@ -25,8 +25,9 @@ mutation. Interpret existing authorization using
 [Intent And Authority](intent-and-authority.md).
 
 Identify one execution host and classify additional originals as required build
-sources or evidence-only sources. Preserve inherited claims' provenance; a source
-role does not grant host-structure or narrative authority.
+sources or evidence-only sources under
+[Input Scope](../conventions/execution-records.md#input-scope). Preserve inherited
+claims' provenance; a source role does not grant host-structure or narrative authority.
 
 Unresolved intent permits relevant investigation and provisional samples.
 An unidentified base permits read-only analysis, but no binary mutation.
@@ -87,9 +88,11 @@ require each unit's runtime pass in advance; completion does.
 
 A component claiming source conformance, asset coherence, behavior equivalence,
 reachability, or another specialized property also needs a scoped passing
-readiness assessment from the applicable domain capability. Components making no
-such claim inherit no extra domain gate. Reassess when expansion introduces a
-different format, loader path, or unproven dependency.
+readiness assessment for the proposed expansion and its dependencies from the
+applicable domain capability. This assessment does not gate the bounded experiments
+or PoC needed to establish readiness. Components making no such claim inherit no
+extra domain gate. Reassess when expansion introduces a different format, loader
+path, or unproven dependency.
 
 ## Private Playable Gate
 
@@ -99,8 +102,9 @@ Complete the work for its intended personal route only when:
 - the selected output is reproducible from the adopted inputs and transforms,
 - required creative decisions and content are approved within their review scope,
 - applicable specialized completion claims have scoped passing assessments,
-- every changed surface on that route has sufficient game-visible evidence tied
-  to the selected build, and
+- every changed surface on that route has sufficient game-visible evidence
+  applicable to the selected build under
+  [Claim Assessments](../conventions/claim-assessments.md#evidence-from-another-build), and
 - known critical runtime, story-state, save/load, route, and required-asset issues
   are zero for that route.
 

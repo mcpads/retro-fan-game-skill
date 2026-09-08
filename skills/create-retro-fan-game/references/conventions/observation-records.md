@@ -31,5 +31,6 @@ Preserve:
 - collection failures, missing observables, and newly discovered limits.
 
 Keep project verdicts in assessments, not raw observations. Preserve raw results
-when conclusions change. Retain any tool-supplied verdict as part of its original
-response; the project's assessment must decide whether it supports the claim.
+and the actual observed build identity when conclusions or selected builds change.
+Retain any tool-supplied verdict as part of its original response; the project's
+assessment must decide whether it supports the claim.

@@ -43,9 +43,8 @@ records, conversions and writes in execution records, and display or playback
 evidence in observations. Assess those records without copying their contents.
 
 Use [Asset Assessment Profiles](../conventions/asset-assessment-profiles.md) for
-readiness before producing assets for the build and for applicable completion
-claims. Small provisional samples can establish the intended identity before
-full production readiness.
+readiness for production expansion and applicable completion claims.
+The readiness profile also defines how provisional work may resolve gaps.
 
 ## Review Related Representations Together
 

@@ -24,14 +24,26 @@ write enters a protected boundary, a dependency is missing, or a final
 difference has no owner. Do not silently carry unknown entries, failed
 conversions, or missing assets into the output.
 
+## Input Scope
+
+Record what each task actually consumes. Investigation may parse or extract an
+`evidence_only` original; a conversion may consume only authored assets. Neither
+requires the execution host as an input unless the task uses it.
+
+Original-source roles describe product dependencies. An additional original is a
+`build_source` when adopted game material must be reconstructed from it. Verify
+its identity and keep that reconstruction in the product build; a cached extract
+does not remove the dependency. Reading an original to establish facts or guide
+newly authored work does not by itself make it a build source.
+
 ## Transform Record
 
 For each deterministic transform, preserve:
 
 - transform identity and exact source revision or content hash, including local
   changes that affect execution,
-- verified input identities, hashes, and roles: one execution host plus any
-  required user-supplied build sources,
+- verified identities and hashes of consumed inputs, their task purpose, and
+  original-source roles when applicable,
 - configuration and any structure-map identity the transform consumes,
 - declared outputs and expected identity policy,
 - checks that run before, during, and after the transform,
@@ -63,7 +75,3 @@ the result. Extending checks should protect the behavior or reproduced failure,
 not freeze incidental counts, offsets, or file sizes from a one-off experiment.
 An exact value is a requirement only when its source identity and invariant are
 established for the claimed scope.
-
-Evidence-only sources do not become transform inputs. When a component derives
-local material from another original game, identify that game as a build source
-and fail closed if its expected identity is absent or mismatched.
