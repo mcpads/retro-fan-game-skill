@@ -54,10 +54,21 @@ new work says and how it derives from zero or more source claims. Host bindings
 own where those authored units may appear. Execution and observation remain
 downstream owners.
 
-Before build-bound expansion, require a readiness assessment for every
-source-constrained narrative component. Before claiming narrative completion,
-require a relation-appropriate conformance assessment. A runtime pass may prove
-that a unit was consumed but does not prove narrative conformance.
+Use [Narrative Assessment Profiles](../conventions/narrative-assessment-profiles.md)
+to judge readiness for build-bound expansion and conformance for completion.
+Provisional samples may explore a relation before those assessments pass.
+
+## Review Meaning In Context
+
+When a material narrative choice remains open, show the relevant source context,
+a short authored alternative, and its causal consequences for the route. Label
+invention and uncertain reconstruction. Present only alternatives that illuminate
+the person's actual decision; do not make them select a host-event mapping.
+
+Apply the project's existing creative decisions to the sample. Reopen only the
+meaning or tradeoff that is unresolved or changed. Approval of a divergence sets
+the intended relation; it does not remove the need to assess coherent consequences
+or review newly authored content within the agreed scope.
 
 ## Hard Stops
 

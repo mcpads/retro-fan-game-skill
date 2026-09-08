@@ -51,13 +51,20 @@ look alike. Required means required by the declared surface or its dependencies.
 
 ## Evidence Entry
 
-Every promoted fact identifies:
+Every claim about a field identifies:
 
 - subject field and asserted value,
 - status: `hypothesis`, `measured`, `rebuild_proven`, or `runtime_proven`,
+- applicability: `current`, `invalidated`, or `superseded`, separate from the
+  kind of evidence previously obtained,
 - source identity and evidence reference,
 - scope and known limits,
 - dependent fields or claims that must be revisited if it changes.
+
+Correct interpreted facts using
+[Project State](project-state.md#invalidation); retain earlier evidence and the
+reason for supersession. Builds and assessments pin the structure contents they
+used, so updating a stable field ID cannot silently validate an older result.
 
 ## Conditional Inserted-resource Record
 
@@ -75,6 +82,12 @@ already expose as a replaceable slot. Record:
 - dependencies, budgets, static checks, and runtime observation claim,
 - rollback or disable behavior used for diagnosis.
 
+During investigation, mark unknown chain links and proposed values explicitly.
+The registry describes the experiment as well as the adopted result; its presence
+does not imply insertion readiness. Apply
+[Workflow Gates](../strategy/workflow-gates.md#experimental-work) to experiments
+and its PoC gate to promotion.
+
 When sharing is in scope, the package manifest points to this registry. The
 registry itself does not make packaging mandatory.
 
@@ -82,5 +95,6 @@ registry itself does not make packaging mandatory.
 
 Link the structure record to the deterministic extractor or builder interface,
 the checks that validate it, and the expected-write records that consume it.
-Keep current completion status and time-bound runtime results in their owning
-artifact or observation records rather than mutating measured structure facts.
+Keep current selection in the project's current entry and runtime results in
+observation records. Structure facts may be corrected without rewriting that
+history.

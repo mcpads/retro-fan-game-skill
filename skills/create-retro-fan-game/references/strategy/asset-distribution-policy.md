@@ -19,8 +19,8 @@ boundary; other references apply them rather than restating them.
 | Runtime evidence or preview | Include only when necessary, scoped, and reviewed for original content |
 
 Concrete provenance fields belong to
-`references/conventions/artifact-states.md`; package fields belong to
-`references/conventions/package-manifest.md`.
+[Creative Artifact States](../conventions/artifact-states.md); package fields belong to
+[Package Manifest](../conventions/package-manifest.md).
 
 ## Package Boundary
 

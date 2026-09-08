@@ -1,8 +1,10 @@
 # Execution Records
 
-Execution records make local mutation inspectable and replaceable. They prove
-what a builder was asked to do and what it produced; they do not prove runtime
-consumption.
+Execution records preserve declared inputs, writes, checks, and outputs. Their
+evidence boundary is owned by
+[Capability Composition](../strategy/composition.md#responsibilities).
+Use [Project State](project-state.md) for selecting adopted product inputs;
+experimental runs remain distinguishable from the selected playable.
 
 ## Expected Write
 
@@ -26,7 +28,8 @@ conversions, or missing assets into the output.
 
 For each deterministic transform, preserve:
 
-- transform identity and version,
+- transform identity and exact source revision or content hash, including local
+  changes that affect execution,
 - verified input identities, hashes, and roles: one execution host plus any
   required user-supplied build sources,
 - configuration and any structure-map identity the transform consumes,
@@ -39,6 +42,7 @@ For each deterministic transform, preserve:
 Each completed run records:
 
 - run identity,
+- run purpose and experiment question or adopted-input selection reference,
 - exact input and transform identities,
 - structure-map and overlay identities when the run consumes them,
 - expected-write set when the run applies mutations,
@@ -52,6 +56,13 @@ A successful receipt requires no skipped required check and, when final-diff
 ownership applies, zero unexplained final differences. Runtime evidence for a
 built output references the receipt identity so the observed game cannot be
 confused with another build.
+
+An experimental run may fail its hypothesis while still producing useful
+evidence. Record actual check failures; do not relabel them as passes to retain
+the result. Extending checks should protect the behavior or reproduced failure,
+not freeze incidental counts, offsets, or file sizes from a one-off experiment.
+An exact value is a requirement only when its source identity and invariant are
+established for the claimed scope.
 
 Evidence-only sources do not become transform inputs. When a component derives
 local material from another original game, identify that game as a build source

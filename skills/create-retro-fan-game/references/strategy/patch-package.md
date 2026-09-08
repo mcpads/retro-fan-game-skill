@@ -9,9 +9,9 @@ complete, or consume a private fan game.
 Let another owner reproduce the declared local target from their verified
 execution host and any additional required build-source originals. Apply the
 classifications and negative boundary owned by
-`references/strategy/asset-distribution-policy.md`; do not redefine that
+[Asset Distribution Policy](asset-distribution-policy.md); do not redefine that
 boundary in the packaging branch. Use
-`references/conventions/package-manifest.md` for concrete inventory and
+[Package Manifest](../conventions/package-manifest.md) for concrete inventory and
 clean-workspace requirements.
 
 ## Shareable Surface
@@ -29,9 +29,9 @@ classification, with the provenance and dependencies required by the manifest.
 - Include inserted-resource data only when its registry and runtime evidence are
   complete for the declared package scope.
 - Pass the clean-workspace test owned by
-  `references/conventions/package-manifest.md` before promoting a shareable
+  [Package Manifest](../conventions/package-manifest.md) before promoting a shareable
   candidate.
 
 Expected writes and execution receipts are owned by
-`references/conventions/execution-records.md`; exact candidate criteria are
-owned by `references/strategy/workflow-gates.md`.
+[Execution Records](../conventions/execution-records.md); exact candidate criteria are
+owned by [Workflow Gates](workflow-gates.md).

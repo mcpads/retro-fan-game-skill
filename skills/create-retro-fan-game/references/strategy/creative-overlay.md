@@ -2,8 +2,9 @@
 
 A creative overlay is the bounded fan-game layer applied to a verified base. It
 may change dialogue, scenarios, routes, interface text, audiovisual assets,
-rules, or a narrow composition of those surfaces. "Make a new game" is not a
-sufficient scope.
+rules, or a composition of those surfaces. Use
+[Intent And Authority](intent-and-authority.md) to establish the playable target
+when the request does not yet constrain a useful next action.
 
 ## Component Graph
 
@@ -24,9 +25,8 @@ another or require every component to share the same source.
 - Anchor every build-bound unit to a stable structure identity.
 - State the intended personal route and the surfaces allowed to change.
 - Preserve control, state, and runtime requirements beside the creative intent.
-- Prefer scene-local or surface-local changes before global route or engine
-  changes.
-- Combine overlays only after each constituent surface has its own proof.
+- Prefer changes with fewer affected dependencies when they preserve the intended
+  experience; investigate broader changes when the target requires them.
 - Activate a specialized domain capability only when the component claims a
   property that the core cannot assess, and consume its handoff without copying
   its records.
@@ -39,19 +39,11 @@ required runtime elements, proven surface budgets, and forbidden
 contradictions. Missing engine or story-state facts remain questions.
 
 The concrete brief and state record is owned by
-`references/conventions/artifact-states.md`.
-
-## Human And Delegated Authority
-
-AI may draft variants, compare tradeoffs, and reject options that violate proven
-constraints. It may approve lower-impact choices only when the person has
-explicitly delegated that class and scope. Materially different choices about
-premise, character, meaning, canon, tone, or acceptable risk return to the
-person before the unit becomes approved.
+[Creative Artifact States](../conventions/artifact-states.md).
 
 ## Build Boundary
 
-Provisional creative exploration may begin before every engine detail is known.
-Encoding, insertion, and runtime-completion states may not be claimed until the
-relevant structure and evidence gates pass. Creative coherence, build validity,
-runtime behavior, and human approval remain separate judgments.
+Apply [Workflow Gates](workflow-gates.md) for experiments, PoC, and broader
+build-bound expansion. Apply [Intent And Authority](intent-and-authority.md) for
+sample review and existing approval scope; a component graph creates no additional
+approval requirement by itself.

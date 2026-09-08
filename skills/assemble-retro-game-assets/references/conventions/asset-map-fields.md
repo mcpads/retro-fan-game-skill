@@ -12,7 +12,7 @@ Record:
 - zero or more source asset references,
 - one or more authored asset-unit IDs,
 - semantic relation defined in
-  `references/strategy/asset-assembly.md#separate-semantic-and-physical-relations`,
+  [Separate Semantic And Physical Relations](../strategy/asset-assembly.md#separate-semantic-and-physical-relations),
 - meaning and recognizable state that must be retained,
 - intentional differences and their rationale,
 - continuity-group references,
@@ -36,7 +36,7 @@ Record:
 - unresolved host gaps and the claims they block.
 
 Interpret physical binding intent under
-`references/strategy/asset-assembly.md#separate-semantic-and-physical-relations`;
+[Separate Semantic And Physical Relations](../strategy/asset-assembly.md#separate-semantic-and-physical-relations);
 its mechanics and pass conditions remain with the host structure and execution
 owners.
 

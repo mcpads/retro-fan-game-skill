@@ -1,54 +1,40 @@
 # Fan-game Decision Flow
 
-Fan-game work is a graph of judgments, not a universal sequence. Start from the
-current decision and seek the cheapest evidence that could change it. Open
-independent branches in parallel when useful, but respect the dependency gates
-that protect build integrity and runtime claims.
+Start from the intended playable and the current unresolved decision. Choose
+the smallest action whose result can change what happens next. Work may branch
+or return to investigation; it is not a universal linear schedule.
 
-## Judgment Branches
+## Select The Branch
 
-| Branch | Question it owns | Typical next evidence |
+| Uncertainty | Useful next result | Decision owner |
 | --- | --- | --- |
-| Intent and authority | What does the person want to play, and which choices remain theirs? | bounded creative target and approval boundary |
-| Component semantics | Which independently sourced or authored components compose the work, and which specialized claims constrain them? | component graph and optional capability handoffs |
-| Structure | Is the relevant game surface understood well enough for the proposed mutation? | identity, extraction/rebuild proof, measured constraints, or one resolved gap |
-| Creative overlay | What is being changed without silently widening the work? | brief, approved option, or narrow unit inventory |
-| Execution | Can the declared input be transformed deterministically and safely? | expected writes, static checks, and execution receipt |
-| Observation | What evidence would distinguish the runtime claim from failure? | route-specific raw observation and interpretation |
-| Optional sharing | Can another owner build the declared target without receiving original game material? | manifest and clean-workspace reconstruction |
+| What does the person want to experience or preserve? | A contextual sample or consequential choice | [Intent And Authority](intent-and-authority.md) |
+| What work and evidence are currently selected? | Reconciled current entry | [Project State](../conventions/project-state.md) |
+| Which source meanings and host surfaces constrain the work? | Bounded components and dependencies | [Creative Overlay](creative-overlay.md) |
+| What does the relevant engine path actually allow? | Measured fact or bounded experiment | [Structure-map Readiness](structure-map.md) |
+| Can the proposed change be built correctly? | Checked transform and receipt | [Execution Records](../conventions/execution-records.md) |
+| Does the game consume the change correctly? | Discriminating runtime evidence | [Runtime Observation](runtime-observation.md) |
+| Is the work ready to expand or complete? | Scoped evidence assessment | [Workflow Gates](workflow-gates.md) |
+| Can the declared work be shared? | Package inventory and reconstruction evidence | [Optional Patch Package](patch-package.md) |
 
-## Dependency Edges
+## Choose Work That Changes The Decision
 
-- Intent may be explored before structure is complete, but build-bound content
-  for a surface depends on that surface's structure proof.
-- Components may use different source relationships and domain capabilities.
-  Broad production for a specialized claim depends on that capability's scoped
-  readiness assessment, not on a project-wide mode label.
-- Broad build-bound generation depends on a creative-unit PoC through the real
-  game-consumption path.
-- Resource insertion depends on proof of the complete runtime asset chain, not
-  merely on available storage space.
-- A private-playable claim depends on execution and observation for the intended
-  personal route.
-- Sharing is a separate branch. It depends on private playability across the
-  declared shareable scope, but private playability never depends on packaging.
+Inspect an unknown field before building around it, prove a representative unit
+before generating a corpus, and observe a failing route before diagnosing from
+intermediate data alone. Do not perform a large downstream task merely because
+it is easy to automate.
 
-Exact pass conditions belong to `references/strategy/workflow-gates.md`.
+Use [Workflow Gates](workflow-gates.md) to distinguish experimental work from
+production expansion. One successful surface does not establish the readiness
+of a different loader, format, or route dependency. Independent branches may
+advance while another awaits evidence or a human decision.
 
-## Choosing The Next Move
+When a result is ambiguous, preserve it, refine the technical claim, and choose
+a more discriminating action. Refining a claim must not silently shrink the
+person's completion target. If a prerequisite cannot yet be proven, investigate
+the gap or present the actual tradeoff rather than weakening the pass condition.
 
-Prefer an action that resolves a live fork: inspect an unknown field before
-building around it, prove one representative unit before generating a corpus,
-or observe the route before diagnosing from intermediate data. Do not perform a
-large downstream task merely because it is easy to automate.
-
-When a result is ambiguous, preserve it as evidence, narrow the claim, and pick
-a more discriminating action. Do not weaken a gate to fit an available tool.
-
-## Invalidation
-
-New evidence invalidates only the judgments that depend on it. A changed
-creative brief does not erase base identity; a corrected pointer rule may
-invalidate affected builds and observations without erasing unrelated surface
-proof. Record the affected identities so the next action can be scoped rather
-than restarting the whole project.
+After a result, update its owning record and the current entry under
+[Project State](../conventions/project-state.md). Adopt only supported results,
+invalidate affected dependencies when needed, and choose the next unresolved
+decision against the intended playable.

@@ -11,7 +11,7 @@ For each relevant source or edition, record:
 - stable source-work and edition IDs,
 - title, platform or medium, revision, and other identity discriminators,
 - scoped role defined in
-  `references/strategy/narrative-derivation.md#scoped-source-roles`,
+  [Scoped Source Roles](../strategy/narrative-derivation.md#scoped-source-roles),
 - claims or units inside and outside that authority scope,
 - relationship to other editions or sources,
 - precedence or human conflict-decision reference when scopes overlap,

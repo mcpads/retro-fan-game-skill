@@ -3,10 +3,12 @@
 Use the consuming project's claim-assessment envelope. This convention
 supplies asset-specific criteria without replacing execution, observation, or
 human approval records.
+For standalone use, a section recording the claim, criteria, exact catalog and
+mapping revisions, evidence references, outcome, limits, and next action is enough.
 
 ## Readiness Profile
 
-Before broad asset production, assess the applicable dimensions:
+Before broad build-bound asset production, assess the applicable dimensions:
 
 - intended route and asset component are bounded,
 - required semantic units, variants, states, and surfaces are inventoried,
@@ -20,6 +22,9 @@ Before broad asset production, assess the applicable dimensions:
 
 Record `pass`, `fail`, or `inconclusive`, scope, evidence references, limits,
 and blocked downstream decisions.
+A visible gap is not a passing result when it could invalidate the proposed
+production scope. Use a provisional sample or technical experiment to resolve
+the relevant gap; do not require full-set readiness before that exploration.
 
 ## Completion Profiles
 
@@ -39,3 +44,8 @@ the declared relation and approval record visible in the assessment.
 Runtime evidence decides display, playback, state selection, and route coverage
 claims. The person decides aesthetic meaning, tone, recognizable identity, and
 acceptable tradeoffs.
+
+When source, selected artwork, required variants, or mappings change, invalidate
+dependent assessments and notify the current-state owner. A physical repacking
+may need new runtime evidence while leaving approved semantic identity intact.
+Retain earlier outcomes with their exact original dependencies.

@@ -1,93 +1,62 @@
 ---
 name: adapt-retro-game-narrative
 description: >-
-  Normalize and plan source-aware narrative composition for a retro playable
-  work when an existing story or canon constrains more than a local line. Use
-  for moving one game's story onto another game's execution host, retellings,
-  divergences or alternate timelines, continuations and side stories,
-  evidence-backed restoration, multi-source synthesis, or original scenarios
-  bounded by declared canon. Establish scoped source authority, scene or canon
-  ledgers, authored narrative units, host bindings, and mode-aware readiness or
-  conformance assessments. Do not use for unconstrained original writing,
-  translation-only work, isolated dialogue edits, cosmetic asset swaps, rule
-  or UI mods, or build and emulator verification by themselves.
+  Adapt source-constrained stories for retro playable works: transpositions,
+  retellings, alternate timelines, continuations, restorations, multi-source
+  synthesis, and new scenarios bounded by canon. Use when source meaning or
+  continuity constrains more than an isolated line. Excludes translation-only
+  work, unconstrained original writing, cosmetic swaps, and build or emulator
+  verification alone.
 ---
 
 # Adapt Retro Game Narrative
 
-## Overview
+Turn relevant source evidence into an authored narrative that expresses the
+person's chosen relationship to the original. Keep source meaning, authored
+changes, and host implementation distinguishable. The execution host supplies
+playable surfaces; it does not acquire authority over the story.
 
-Turn relevant source evidence into a traceable narrative plan without making
-the source, target host, or runtime observer interchangeable authorities. Use
-the smallest source scope that constrains the intended playable route.
+## Start Or Resume
 
-This skill owns narrative normalization and derivation contracts. It does not
-own source extraction, asset semantics, binary mutation, runtime observation,
-or the person's high-impact creative decisions.
+Recover the intended route, source authority, current plan, and existing creative
+decisions before expanding the ledger. Use the project's current-state and
+approval owners when composed with other capabilities. When used alone, keep a
+stable entry to the selected source and plan revisions, assessment, unresolved
+choices, and next action in the existing narrative record.
 
-## Operating Model
+Carry explicit requests and prior approvals into that record without asking
+again. Ask about an unresolved material change to meaning, canon, or fidelity
+with a contextual sample and its consequences. Routine investigation and drafting
+within the established direction can proceed. Direction approval does not imply
+approval of all subsequently authored content.
 
-For each narrative unit, determine independently:
+## Work At The Needed Scope
 
-- which source or canon claims constrain it and within what scope,
-- whether it preserves, transforms, branches from, continues, synthesizes, or
-  merely draws constraints from those claims,
-- what the authored work actually asserts before and after the unit,
-- where the authored unit binds to the execution host, and
-- which readiness or conformance claim must pass for the next decision.
-
-Do not force one narrative mode on the whole project. A faithful route, a new
-side scene, and a divergent ending may coexist when their unit-level relations
-and approval boundaries are explicit.
-
-## Dependency Boundaries
-
-- Treat narrative authority, comparison evidence, inspiration, and execution
-  host as scoped roles. A host does not gain narrative authority by providing
-  the runtime.
-- Normalize only source scenes and canon constraints needed by the declared
-  route. Do not turn the skill into an encyclopedia project.
-- Separate source evidence, authored narrative derivation, and host binding.
-- Require human approval for premise, canon, meaning, intentional deviation,
-  source-conflict policy, and acceptable fidelity tradeoffs.
-- Keep narrative readiness and conformance separate from build success and
-  runtime consumption. Runtime evidence may support playable realization but
-  cannot approve meaning.
-- Reuse existing project-native ledgers and plans when they already own the
-  required meanings. Add records only for missing contracts.
+- Normalize only scenes and canon constraints needed by the intended route.
+- Separate source evidence, authored narrative units, and host bindings. These
+  may be separately addressable sections of one project artifact.
+- Let preservation, divergence, continuation, and other relations coexist at
+  unit scope; assess each against its intended relation.
+- Preserve unknown source events, order, state, and edition relationships as
+  gaps. Do not fabricate them to make a plan appear complete.
+- Emit narrative requirements for assets or host behavior; keep their physical
+  implementation and runtime evidence with their owners.
 
 ## Reference Routing
 
-| Current judgment | Read |
+| Current decision | Owner |
 | --- | --- |
-| Select narrative relation, source roles, and dependency gates | `references/strategy/narrative-derivation.md` |
-| Normalize source editions, scenes, state transitions, and canon constraints | `references/conventions/source-ledger-fields.md` |
-| Define authored narrative units and their derivation from zero or more sources | `references/conventions/narrative-plan-fields.md` |
-| Bind authored units to stable host surfaces without absorbing implementation data | `references/conventions/host-binding-fields.md` |
-| Predeclare mode-aware readiness and narrative conformance claims | `references/conventions/narrative-assessment-profiles.md` |
+| Choose source roles, narrative relations, and a reviewable sample | [Narrative Derivation](references/strategy/narrative-derivation.md) |
+| Normalize editions, scenes, state transitions, and canon constraints | [Source-ledger Fields](references/conventions/source-ledger-fields.md) |
+| Describe authored units and derivation from zero or more sources | [Narrative-plan Fields](references/conventions/narrative-plan-fields.md) |
+| Bind authored units to host surfaces | [Narrative Host-binding Fields](references/conventions/host-binding-fields.md) |
+| Assess readiness and relation-appropriate conformance | [Narrative Assessment Profiles](references/conventions/narrative-assessment-profiles.md) |
 
-## Core Invariants
+## Return The Useful Result
 
-- Never invent a source event, order, state, or edition relationship to close a
-  ledger gap.
-- Never decide an absolute canon when the person or source-owning project has
-  not granted that authority.
-- Never use one direct source-scene-to-host-surface table as a substitute for
-  the authored narrative plan.
-- Never treat a deliberate divergence, continuation, or synthesis as failed
-  fidelity merely because it differs from a source outside its declared
-  preservation scope.
-- Never copy source evidence, approvals, execution receipts, or observations
-  into narrative records. Refer to their stable identities.
-- Never let a narrative requirement choose the actual portrait, sprite, map
-  asset, byte write, builder, or observer. Emit requirement and surface
-  references for their owners.
-
-## Expected Outputs
-
-Produce only the artifact that advances the current narrative decision: a
-source-role declaration, bounded source ledger, authored unit, derivation
-relation, host binding, readiness assessment, conformance assessment, or an
-explicit unresolved question. When composed with a fan-game orchestrator,
-export stable artifact IDs, assessment outcome and scope, limits, and blocked
-dependencies rather than transferring ownership of the underlying records.
+Produce the smallest sample, source claim, authored unit, binding, gap, or
+assessment that advances the narrative decision. Reference exact revisions of
+artifacts used in assessments; stable semantic IDs alone do not identify their
+contents. When evidence or intent changes, report affected plans, bindings, and
+assessments to their current-state owner. Preserve raw source evidence and
+unrelated decisions; do not carry a stale conformance pass onto a revised plan.

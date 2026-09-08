@@ -3,6 +3,8 @@
 Use the consuming project's claim-assessment envelope rather than inventing a
 second verdict format. This convention defines narrative-specific criteria that
 may populate that envelope.
+For standalone use, a section recording the claim, criteria, exact source and
+plan revisions, evidence references, outcome, limits, and next action is enough.
 
 ## Readiness Profile
 
@@ -21,6 +23,9 @@ assess the applicable dimensions:
 
 Record `pass`, `fail`, or `inconclusive`, scope, evidence references, limits,
 and blocked downstream decisions.
+Unresolved alternatives may remain only where they cannot invalidate the proposed
+expansion. Assigning a conflict an owner does not resolve it. Provisional samples
+can help settle that conflict before readiness passes.
 
 ## Conformance Profile
 
@@ -42,3 +47,8 @@ is the approved purpose. Do not collapse every relation into fidelity.
 Runtime evidence can show that the host consumed the bound unit and reached the
 required state. Human review decides meaning, canon, tone, and acceptable
 tradeoffs. Keep both evidence classes explicit in the assessment.
+
+When a source correction or creative decision changes a dependency, mark affected
+assessments invalid and notify the current-state owner. A changed host binding
+may require renewed realization evidence without invalidating source meaning or
+an unrelated approved scene. Retain earlier outcomes with their original scope.

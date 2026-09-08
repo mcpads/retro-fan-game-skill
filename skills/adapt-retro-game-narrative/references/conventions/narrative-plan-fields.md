@@ -31,7 +31,7 @@ Record:
 - zero or more source-entry IDs,
 - zero or more authored narrative-unit IDs,
 - descriptive relation defined in
-  `references/strategy/narrative-derivation.md#unit-level-relations`,
+  [Unit-level Relations](../strategy/narrative-derivation.md#unit-level-relations),
 - meaning and state transitions that must be preserved,
 - intentional differences and their rationale,
 - affected branches and convergence conditions,

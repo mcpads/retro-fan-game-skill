@@ -23,7 +23,7 @@ For every included file or logical artifact, record:
 
 - path or stable ID, hash, and purpose,
 - asset class from
-  `references/strategy/asset-distribution-policy.md`,
+  [Asset Distribution Policy](../strategy/asset-distribution-policy.md),
 - provenance record for newly authored or generated assets,
 - local transform or delta relationship for derived original assets,
 - dependency and deterministic build step,
@@ -46,7 +46,7 @@ Include or point to:
 ## Exclusion Checks
 
 Fail package validation when any payload or inventory entry violates its class
-rule in `references/strategy/asset-distribution-policy.md`, or when required
+rule in [Asset Distribution Policy](../strategy/asset-distribution-policy.md), or when required
 provenance and review data are missing.
 
 ## Clean-workspace Test

@@ -1,71 +1,58 @@
 # Capability Composition
 
-Philosophy, execution, and observation answer different questions. Keep their
-contracts separable even when one local implementation provides more than one
-capability.
+This document owns responsibility boundaries and capability selection. Creative
+policy, execution, and observation must remain independently replaceable even
+when one implementation performs all three.
 
-## Claim-first Judgment
+## Responsibilities
 
-1. State the claim that would change the next decision.
-2. Decide whether it requires creative approval, execution evidence, runtime
-   observation, or a composition of them.
-3. Declare the success, failure, and ambiguity observables before acting.
-4. Select the smallest capable executor and observer independently.
-5. Preserve raw results separately from the interpretation and gate decision.
+| Responsibility | Owns | Record or policy |
+| --- | --- | --- |
+| Creative authority | Intended experience and material creative tradeoffs | [Intent And Authority](intent-and-authority.md) |
+| Execution | Declared transforms and their mechanical checks | [Execution Records](../conventions/execution-records.md) |
+| Observation | Raw results, conditions, and collection limits | [Observation Records](../conventions/observation-records.md) |
+| Assessment | Interpretation of evidence and claim promotion | [Claim Assessments](../conventions/claim-assessments.md) |
 
-If the available capability cannot distinguish the outcomes, narrow the claim
-or choose a stronger capability. Its product name never becomes part of the
-pass condition.
+Execution success proves that a declared transform completed. A connection,
+command response, or intermediate write does not prove downstream consumption.
+Runtime claims need evidence from the real game path, and neither execution nor
+observation grants creative approval.
 
-## Cross-boundary Rules
+These are logical responsibilities, not mandatory files, services, or agents.
+A project record may hold separately addressable sections for a transform,
+observation, and assessment, provided the raw evidence remains unchanged when
+the interpretation changes. Preserve exact input references across those sections.
 
-- Do not infer creative approval from a successful transform or observation.
-- Do not infer runtime consumption from a build receipt or intermediate write.
-- Keep observer output limited to raw results, conditions, provenance, and
-  collection limits.
-- Interpret evidence and promote gates in a separate claim assessment.
+## Select Capabilities From The Claim
 
-Execution success proves only that the declared transformation completed. A
-connection, command response, or changed intermediate buffer proves only the
-claim it directly observes. Visibility, state, and playability claims require
-evidence from the real game-consumption path.
+Declare the decision and the success, failure, and ambiguity observables, then
+select an executor and observer capable of distinguishing them. Use the smallest
+sufficient combination of local tools, analysis, and human observation. Product
+names are provenance, never pass conditions.
 
-Use `references/conventions/execution-records.md` for transform records,
-`references/conventions/observation-records.md` for raw observer output, and
-`references/conventions/claim-assessments.md` for interpretation and gate
-promotion.
+When an available tool cannot distinguish the outcomes, investigate another
+method or keep the claim open. Do not substitute a weaker technical claim for
+the person's requested experience.
 
 ## Optional Domain-capability Handoffs
 
-For each bounded component, activate only the domain capability needed to
-decide its specialized meaning or readiness. Different components may use
-different capabilities or no specialized capability at all.
+Activate a specialized assessment only for a component that needs it. Narrative
+source conformance, cross-surface asset coherence, world reachability, and combat
+behavior have different evidence requirements; components need not share one
+project-wide mode.
 
-The core handoff consumes stable prepared-artifact IDs, assessment outcome and
-scope, limits, blocked dependencies, and invalidation references. It does not
-copy the domain records or prescribe the product that produced them. A domain
-capability may define narrative conformance, asset coherence, behavior
-equivalence, reachability, or procedural solvability, but it does not inherit
-execution, observation, packaging, or final creative authority.
+A capability may be supplied by the current agent's evidenced analysis, a
+compatible skill, or another tool. No separately installed specialist is required
+merely to satisfy a role name. If the available methods cannot assess the actual
+property, leave it open and work on its evidence gap or independent components.
 
-Use `references/conventions/artifact-states.md` for the generic component scope
-and handoff record. Leave a specialized claim open when no compatible
-capability can assess it.
+Consume references to domain-owned plans, mappings, assessment scope, outcomes,
+limits, and dependencies using the
+[Capability Handoff Record](../conventions/artifact-states.md#capability-handoff-record).
+Do not copy the domain's schema or transfer execution, observation, packaging,
+or final creative authority to it.
 
-## Creative Authority
-
-Record the person's approval boundary before high-impact content work. Choices
-that materially affect premise, character, meaning, canon, tone, or acceptable
-risk return to the person. Lower-impact choices may be delegated, but only
-inside the recorded scope; delegation is not blanket authorship transfer.
-
-## Replacement Check
-
-Before promoting a reusable conclusion, ask:
-
-- Could another compatible observer challenge the claim from the saved record?
-- Could another executor reproduce the transform without changing what the
-  runtime evidence means?
-- Could the creative policy change without modifying either implementation?
-
-If not, expose and separate the hidden dependency.
+For a reusable boundary, another observer should be able to challenge the saved
+claim and another executor should be able to reproduce the transform without
+changing what the evidence means. Expose hidden dependencies when they prevent
+that replacement.

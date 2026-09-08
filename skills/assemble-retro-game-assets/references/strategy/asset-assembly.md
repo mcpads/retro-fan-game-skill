@@ -43,10 +43,22 @@ records newly authored or generated artifacts. Execution owns conversion and
 writes. Observation owns raw display or playback evidence. The assessment
 combines references without copying them.
 
-Before broad production, require a readiness assessment for the declared asset
-component. Before claiming completion, require coverage and coherence, plus
-source conformance when adaptation is part of the claim. Runtime visibility is
-necessary for a display claim but insufficient for semantic approval.
+Use [Asset Assessment Profiles](../conventions/asset-assessment-profiles.md) for
+readiness before broad build-bound production and for applicable completion
+claims. Small provisional samples can establish the intended identity before
+full production readiness.
+
+## Review Related Representations Together
+
+For an unresolved identity or presentation choice, show a small representative
+set in its game contexts, such as a field pose beside a dialogue portrait. Explain
+intentional differences and any losses caused by the target format. Distinguish
+mockups from assets already observed in the game.
+
+Apply existing approvals to the set. Ask the person about recognizable identity,
+tone, or acceptable simplification when those choices remain open; investigate
+palette packing or loader behavior as technical work. A preview can guide the
+rest of the set without proving its coverage or approving unseen results.
 
 ## Hard Stops
 

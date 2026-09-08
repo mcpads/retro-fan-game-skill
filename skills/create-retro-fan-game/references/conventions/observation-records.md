@@ -1,8 +1,8 @@
 # Observation Records
 
 An observation record is observer-produced raw evidence. It reports what was
-collected and under which conditions; it does not decide whether a philosophical
-claim, artifact state, or completion gate passes.
+collected and under which conditions. Responsibility boundaries are owned by
+[Capability Composition](../strategy/composition.md#responsibilities).
 
 ## Observation Request Reference
 
@@ -13,6 +13,7 @@ Record:
 - game or base identity and the runtime identity available for the request,
 - original input, build receipt, structure-map, and overlay identities when the
   requested observable depends on those artifacts,
+- the loaded output's identity and starting save or runtime state when relevant,
 - declared preconditions, route or procedure, inputs, and relevant timing,
 - known observer blind spots at selection time.
 
@@ -32,3 +33,5 @@ Preserve:
 Do not add pass, fail, completion, or gate fields to this record. Do not rewrite
 the raw result to match a later conclusion. A later assessment references the
 observation ID and may be replaced without mutating this evidence.
+If a tool also returns its own verdict, retain the original tool response as
+evidence; only the consuming assessment can promote a project claim from it.

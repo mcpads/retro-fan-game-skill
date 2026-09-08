@@ -1,52 +1,47 @@
 # Structure-map Readiness
 
-A structure map is the contract between reverse engineering and build-bound
-creative work. It need not describe the whole game; it must describe every
-surface and dependency claimed by the intended overlay.
-
-Concrete fields belong to
-`references/conventions/structure-map-fields.md`.
+A structure map connects reverse engineering to the surfaces and dependencies
+the intended overlay needs. It need not describe the whole game. Concrete
+fields belong to [Structure-map Fields](../conventions/structure-map-fields.md).
 
 ## Evidence Distinctions
 
-Keep these states explicit:
-
-| State | Meaning |
+| Evidence | What it supports |
 | --- | --- |
-| Hypothesis | Plausible but not proven for the local identity |
-| Measured fact | Supported by local parsing, disassembly, comparison, or observation |
-| Rebuild proof | Extraction and reconstruction preserve the relevant behavior or bytes |
-| Runtime proof | A controlled mutation was consumed through the intended game path |
-| Gap | Missing knowledge that could alter the build or claim |
+| Hypothesis | A possible rule, not established for the local identity |
+| Measured fact | A scoped rule supported by local parsing, disassembly, comparison, or observation |
+| Rebuild proof | Extraction and reconstruction preserve relevant behavior or bytes |
+| Runtime proof | A controlled change is consumed through the intended game path |
+| Gap | Missing knowledge that could change a decision |
 
-A hidden hypothesis is more dangerous than a visible gap. Never promote an
-inherited claim merely because it came from a mature translation patch, mod,
-toolkit, editor, or disassembly; preserve its provenance and verify it when the
-new overlay depends on it.
+A mature patch, toolkit, editor, or disassembly may supply useful evidence.
+Preserve its provenance and verify applicability to the local input and new use;
+do not promote inherited assertions by reputation. Keep original inputs and raw
+evidence immutable while correcting the interpreted structure record when needed.
 
-## Relevant-surface Readiness
+## Surface Readiness
 
-| Level | Meaning | Allowed work |
-| --- | --- | --- |
-| Surveyed | Likely locations and dependencies are identified | planning and provisional creative exploration |
-| Rebuild-proven | Relevant extraction, encoding, relocation, and reconstruction behavior is established | tooling and one controlled mutation |
-| PoC-proven | One minimal changed unit is observed through the real game path | bounded expansion on that proven surface |
-| Overlay-ready | Every surface and cross-surface dependency in the declared overlay has the required proof | declared overlay development |
+Use these labels as projections of the applicable proof, not independent verdicts:
 
-Private playability and sharing are product completion states, not structure-map
-readiness levels. Their definitions remain in
-`references/strategy/workflow-gates.md`.
+| Level | Referenced evidence |
+| --- | --- |
+| Surveyed | Likely locations and dependencies identified, with explicit gaps |
+| Rebuild-proven | Relevant-surface proof gate passes |
+| PoC-proven | Creative-unit PoC gate passes for the proposed surface use |
+| Overlay-ready | Required proof covers the declared surfaces and cross-surface dependencies |
 
-## Activation Rule
-
-People may explore premises, briefs, and provisional drafts while structure is
-unknown. Do not commit broad generated or authored content to a build surface
-until the relevant structure and one-unit PoC are proven. Unknown engine or
-story-state facts become questions or gaps, not invented constraints.
+[Workflow Gates](workflow-gates.md) owns the pass conditions and permitted
+promotion. Its experimental-work conditions apply even at the surveyed level;
+a readiness label must not prevent the experiment needed to establish proof.
+Private playability and sharing are product outcomes, not structure-map levels.
 
 ## Gap-driven Work
 
-When existing artifacts are available, begin with a gap list. Prefer proving the
-smallest missing fact that unlocks the intended overlay over remapping unrelated
-game systems. If evidence changes, invalidate the affected fields, builds, and
-runtime claims while retaining unrelated proof.
+Start from existing evidence and resolve the smallest gap that unlocks the
+intended overlay. Explore premises and provisional drafts while structure is
+unknown. Distinguish an authored creative choice from a claim about existing
+engine or story state; missing facts remain unknown.
+
+Apply [Project State](../conventions/project-state.md#invalidation) when a rule
+changes. Record the affected fields and dependent claims so a correction scopes
+the next work instead of restarting the project or preserving a stale pass.
