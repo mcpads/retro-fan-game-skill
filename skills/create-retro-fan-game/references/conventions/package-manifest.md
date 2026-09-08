@@ -54,12 +54,15 @@ Fail validation when package contents violate
 [Asset Distribution Policy](../strategy/asset-distribution-policy.md) or required
 provenance and review records are missing.
 
-## Clean-workspace Test
+## Clean-workspace Verification
 
-Test in a workspace containing only the package and all expected user-supplied
+Rebuild in a workspace containing only the package and all expected user-supplied
 original build inputs. Record their roles and identities, package identity,
 execution receipt, output identity, and checks run. The build must reproduce
 the declared target.
+
+These are product build and artifact verification results under
+[Work Roles](work-roles.md), even when orchestrated by a test runner.
 
 Repeat without the execution host and then without each required build source.
 Each build must fail closed before using a mismatched or missing input. The

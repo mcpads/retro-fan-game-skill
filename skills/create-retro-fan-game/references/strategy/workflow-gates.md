@@ -46,7 +46,7 @@ or other unknown structure. Run it when:
 - a stopping condition identifies when to inspect the result rather than expand.
 
 Run applicable checks and retain failures as evidence. Inspect unknown write
-boundaries before mutation, but do not require the test's conclusion in advance.
+boundaries before mutation, but do not require the experiment's conclusion in advance.
 Use experimental results in production only after the applicable proof gates pass.
 Record adoption under
 [Project State](../conventions/project-state.md#research-experiments-and-adopted-work).
@@ -99,7 +99,9 @@ path, or unproven dependency.
 Complete the work for its intended personal route only when:
 
 - exact execution-host and required build-source inputs are validated locally,
-- the selected output is reproducible from the adopted inputs and transforms,
+- the selected output includes all adopted changes for that scope and is
+  reproducible through the
+  [Product Build Path](../conventions/execution-records.md#product-build-path),
 - required creative decisions and content are approved within their review scope,
 - applicable specialized completion claims have scoped passing assessments,
 - every changed surface on that route has sufficient game-visible evidence

@@ -23,7 +23,7 @@ only what the policy permits, with the evidence and limits the manifest requires
   missing dependencies, or invalid final identity.
 - Include inserted-resource data only when its registry and runtime evidence are
   complete for the declared package scope.
-- Pass the manifest's clean-workspace test before declaring a shareable candidate.
+- Pass the manifest's clean-workspace verification before declaring a shareable candidate.
 
 Use [Execution Records](../conventions/execution-records.md) for writes and receipts,
 and [Workflow Gates](workflow-gates.md) for candidate criteria.

@@ -12,8 +12,9 @@ observation remain replaceable, even within one implementation.
 | Observation | Raw results, conditions, and collection limits | [Observation Records](../conventions/observation-records.md) |
 | Assessment | Whether the evidence satisfies a claim | [Claim Assessments](../conventions/claim-assessments.md) |
 
-Execution success establishes that a transform completed. Runtime claims need
-evidence that the game actually used its result; neither proves creative approval.
+Distinguish technical operations and their evidence under
+[Work Roles](../conventions/work-roles.md), including when one command performs
+several operations. Their success does not establish creative approval.
 
 One record may contain separately referenced sections for a transform,
 observation, and assessment. Preserve exact input references and keep raw evidence

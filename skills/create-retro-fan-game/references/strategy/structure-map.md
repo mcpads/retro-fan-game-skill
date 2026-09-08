@@ -3,6 +3,8 @@
 A structure map connects reverse engineering to the surfaces and dependencies
 the intended overlay needs. It need not describe the whole game. Concrete
 fields belong to [Structure-map Fields](../conventions/structure-map-fields.md).
+Use [Technical Investigation](technical-investigation.md) to establish missing
+facts, including when no structure map exists yet.
 
 ## Evidence Distinctions
 
@@ -37,10 +39,9 @@ Private playability and sharing are product outcomes, not structure-map levels.
 
 ## Gap-driven Work
 
-Start from existing evidence and resolve the smallest gap that unlocks the
-intended overlay. Explore premises and provisional drafts while structure is
-unknown. Distinguish an authored creative choice from a claim about existing
-engine or story state; missing facts remain unknown.
+Explore premises and provisional drafts while structure is unknown. Distinguish
+an authored creative choice from a claim about existing engine or story state;
+missing facts remain unknown.
 
 When a rule changes, identify affected fields and dependent claims under
 [Project State](../conventions/project-state.md#invalidation). Recheck those

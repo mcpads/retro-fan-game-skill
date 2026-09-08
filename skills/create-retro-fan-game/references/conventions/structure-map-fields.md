@@ -58,7 +58,8 @@ Every claim about a field identifies:
 - applicability: `current`, `invalidated`, or `superseded`, separate from the
   kind of evidence previously obtained,
 - source identity and evidence reference,
-- scope and known limits,
+- scope and known limits, including inspected coverage, shared-consumer evidence,
+  and exceptions when a claim spans a population,
 - dependent fields or claims that must be revisited if it changes.
 
 Correct interpreted facts using
@@ -93,7 +94,7 @@ registry itself does not make packaging mandatory.
 
 ## Build Linkage
 
-Link the structure record to the deterministic extractor or builder interface,
+Link the structure record to the deterministic extractor or product builder interface,
 the checks that validate it, and the expected-write records that consume it.
 Keep current selection in the project's current entry and runtime results in
 observation records. Structure facts may be corrected without rewriting that

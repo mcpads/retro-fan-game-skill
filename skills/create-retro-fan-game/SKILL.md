@@ -23,11 +23,13 @@ personal route is a complete outcome; sharing is optional.
 
 Read only the references needed for the next decision, not the entire catalog.
 
+- For existing work, use [Project State](references/conventions/project-state.md)
+  to recover current decisions, selected work, and valid evidence.
 - For a new or unclear idea, use
   [Intent And Authority](references/strategy/intent-and-authority.md) to establish
   the playable target and unresolved choices.
-- For existing work, use [Project State](references/conventions/project-state.md)
-  to recover current decisions, selected work, and valid evidence.
+- When the host or an affected engine path is unknown, start with
+  [Technical Investigation](references/strategy/technical-investigation.md).
 - Choose the next action with
   [Fan-game Decision Flow](references/strategy/fan-game-pipeline.md).
 
@@ -37,7 +39,7 @@ Read only the references needed for the next decision, not the entire catalog.
   rewriting observations, and distinguish hypotheses from established facts.
 - Work only on surfaces and dependencies needed by the intended route. A surface
   is an editable part of the host game, such as a dialogue table or portrait set.
-- Test unknowns with small experiments before expanding production; apply
+- Investigate unknowns with small experiments before expanding production; apply
   [Workflow Gates](references/strategy/workflow-gates.md).
 - Reuse existing records. Different responsibilities need not require separate
   files, tools, or agents.
@@ -50,6 +52,7 @@ Read only the references needed for the next decision, not the entire catalog.
 | Current decision | Read |
 | --- | --- |
 | Select executor, observer, or specialized domain capabilities | [Capability Composition](references/strategy/composition.md) |
+| Distinguish analysis, tooling builds, product builds, tests, and verification | [Work Roles](references/conventions/work-roles.md) |
 | Judge relevant structure evidence and gaps | [Structure-map Readiness](references/strategy/structure-map.md) |
 | Admit an experiment or judge PoC, expansion, private completion, or sharing | [Workflow Gates](references/strategy/workflow-gates.md) |
 | Bound components, source relationships, and changed surfaces | [Creative Overlay](references/strategy/creative-overlay.md) |
@@ -68,7 +71,7 @@ resource insertion, or sharing.
 | --- | --- |
 | Base identity, surface facts, and conditional insertion registry | [Structure-map Fields](references/conventions/structure-map-fields.md) |
 | Component scope, brief, approval, content state, and asset provenance | [Creative Artifact States](references/conventions/artifact-states.md) |
-| Expected writes, deterministic transforms, and run receipts | [Execution Records](references/conventions/execution-records.md) |
+| Product build path, expected writes, transforms, and run receipts | [Execution Records](references/conventions/execution-records.md) |
 | Raw evidence and collection limits | [Observation Records](references/conventions/observation-records.md) |
 | Evidence interpretation and pass/fail decisions | [Claim Assessments](references/conventions/claim-assessments.md) |
 | Conditional package inventory and clean-workspace checks | [Package Manifest](references/conventions/package-manifest.md) |

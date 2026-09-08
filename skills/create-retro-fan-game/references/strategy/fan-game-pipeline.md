@@ -11,8 +11,9 @@ or return to investigation; it is not a universal linear schedule.
 | What does the person want to experience or preserve? | A contextual sample or consequential choice | [Intent And Authority](intent-and-authority.md) |
 | What work and evidence are currently selected? | Verified current-state entry | [Project State](../conventions/project-state.md) |
 | Which source meanings and host surfaces constrain the work? | Bounded components and dependencies | [Creative Overlay](creative-overlay.md) |
-| What does the relevant engine path actually allow? | Measured fact or bounded experiment | [Structure-map Readiness](structure-map.md) |
-| Can the proposed change be built correctly? | Checked transform and receipt | [Execution Records](../conventions/execution-records.md) |
+| What does the relevant engine path actually allow? | Measured fact or bounded experiment | [Technical Investigation](technical-investigation.md) |
+| Which technical operation and evidence does the next decision need? | Work role with explicit input and claim boundaries | [Work Roles](../conventions/work-roles.md) |
+| Can the selected changes form one reproducible game image? | Cumulative product build and verification receipt | [Execution Records](../conventions/execution-records.md#product-build-path) |
 | Does the game use the change correctly? | Evidence distinguishing expected behavior from failure | [Runtime Observation](runtime-observation.md) |
 | Is the work ready to expand or complete? | Scoped evidence assessment | [Workflow Gates](workflow-gates.md) |
 | Can the declared work be shared? | Package inventory and reconstruction evidence | [Optional Patch Package](patch-package.md) |

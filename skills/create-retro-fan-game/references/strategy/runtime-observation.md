@@ -4,6 +4,8 @@ Runtime observation answers claims about what the game actually consumed,
 displayed, played, or did. Define the observable from the claim and then choose
 any manual, interactive, automated, or combined observer capable of producing
 sufficient evidence under [Capability Composition](composition.md).
+This is runtime verification under [Work Roles](../conventions/work-roles.md),
+including when a test runner collects the observations.
 
 ## Evidence Selection
 

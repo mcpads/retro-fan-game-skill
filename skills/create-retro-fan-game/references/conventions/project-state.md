@@ -53,14 +53,17 @@ technical adoption unless it crosses the creative boundary in
 [Intent And Authority](../strategy/intent-and-authority.md).
 Reuse experimental code in place when suitable; adoption requires no copy.
 
-Build from explicitly selected inputs and required deterministic transforms.
+Selecting a finding does not select its discovery procedure. Adopt a procedure
+for recurring product use only when it supplies a required deterministic transform
+or mechanical check, with declared inputs, outputs, and failure behavior under the
+[Product Build Path](execution-records.md#product-build-path).
 Preserve adopted analysis or generation results and provenance. Do not scan old
 experiments for inputs, rerun exploratory analysis or creative generation on each
 build, or depend on a transient cache.
 
 ## Invalidation
 
-When evidence or intent changes, follow dependencies to affected facts, builds,
+When evidence or intent changes, follow dependencies to affected facts, product builds,
 and assessments. Mark conclusions that no longer apply as invalid before further
 adoption or completion decisions; preserve unrelated proof.
 Applying runtime evidence to a different build requires the scoped comparison in

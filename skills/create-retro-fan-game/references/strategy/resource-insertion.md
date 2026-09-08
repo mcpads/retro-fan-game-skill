@@ -32,9 +32,9 @@ An unknown link is a bounded investigation target, not a guessed production rule
 ## Minimal Insertion Experiment
 
 Use [Experimental Work](workflow-gates.md#experimental-work) to admit one small
-observable insertion. The test may establish the previously unknown discovery,
+observable insertion. The experiment may establish the previously unknown discovery,
 load, or retirement behavior; the complete runtime chain need not be proven
-before this isolated test.
+before this isolated experiment.
 
 Observe the new resource and a relevant adjacent old resource through the real
 consumption path, including affected cache, fallback, and retirement behavior.
