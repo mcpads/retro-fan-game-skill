@@ -1,11 +1,8 @@
 # Asset Distribution Policy
 
-Sharing is optional. When it is in scope, classify every artifact by its
-relationship to the user's original game inputs and preserve a hard boundary
-between shareable project data and material reconstructed locally from those
-originals.
-This document owns the skill's asset classifications and negative package
-boundary; other references apply them rather than restating them.
+When sharing is in scope, classify each artifact by its relationship to the
+user's original game inputs. This policy defines what may be included and what
+must be reconstructed locally from those originals.
 
 ## Asset Classes
 
@@ -18,16 +15,15 @@ boundary; other references apply them rather than restating them.
 | Generated asset | Include when provenance, approval state, and runtime validation are recorded |
 | Runtime evidence or preview | Include only when necessary, scoped, and reviewed for original content |
 
-Concrete provenance fields belong to
-[Creative Artifact States](../conventions/artifact-states.md); package fields belong to
-[Package Manifest](../conventions/package-manifest.md).
+Use [Creative Artifact States](../conventions/artifact-states.md) for provenance
+fields and [Package Manifest](../conventions/package-manifest.md) for inventory
+and reconstruction checks.
 
 ## Package Boundary
 
-A shareable package may remain independently useful as writing, artwork,
-metadata, or tooling. The required boundary is narrower and testable: without
-the expected user-supplied original inputs, it must not build a playable target
-or reconstruct meaningful original assets from any omitted input.
+A package may be useful on its own as writing, artwork, metadata, or tooling.
+Without the expected original inputs, it must not build the playable target or
+reconstruct meaningful original assets from any omitted input.
 
 The local builder validates the execution host and every required build-source
 identity, reconstructs derived data locally, and emits rebuilt game outputs

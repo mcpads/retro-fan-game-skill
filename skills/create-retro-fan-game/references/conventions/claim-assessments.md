@@ -1,9 +1,8 @@
 # Claim Assessments
 
-A claim assessment interprets evidence for a decision under the responsibility
-boundaries in [Capability Composition](../strategy/composition.md). A short
-section in an existing record can suffice; create assessments for consequential
-claims and promotion decisions, not for every routine tool call.
+An assessment decides whether evidence supports a claim under
+[Capability Composition](../strategy/composition.md). Record consequential
+decisions in existing project data; routine tool calls need no separate assessment.
 
 ## Predeclared Claim
 
@@ -13,16 +12,13 @@ Before requesting evidence, record:
 - the decision, artifact state, or gate the claim may change,
 - relevant game, surface, route, build, and overlay scope with exact input
   revisions or hashes when the claim depends on content,
-- success, failure, and ambiguity observables,
+- observations that distinguish success, failure, and uncertainty,
 - evidence types and sufficiency criteria,
 - alternatives that the requested evidence must distinguish.
 
-Unavailable identities remain explicitly pending rather than being fabricated
-to satisfy the schema.
-Existing evidence may be reused after checking its relevance to these criteria.
-Do not describe criteria devised after collection as having guided that earlier
-collection; obtain additional evidence if the saved result cannot distinguish
-the current alternatives.
+Mark unavailable identities as pending. Reuse saved evidence when it meets the
+current criteria; collect more if it cannot distinguish the alternatives. If
+criteria were defined after collection, record that timing accurately.
 
 ## Evidence References
 
@@ -49,8 +45,7 @@ After evidence collection, record:
 - artifact states or gates promoted, invalidated, or left open,
 - next action for a failed or inconclusive result.
 
-Only a current pass that satisfies the declared criteria for the selected inputs
-may promote a claim. New evidence creates a new assessment; retain the earlier
-outcome and mark its applicability under
-[Project State](project-state.md#invalidation). Do not rewrite raw observations
-or select an older pass while relevant conflicting evidence remains unresolved.
+Only a current pass for the selected inputs can support completion or the next
+gate. Reassess new evidence while retaining prior outcomes and raw observations.
+Apply [Project State](project-state.md#invalidation) to outdated or conflicting
+assessments.

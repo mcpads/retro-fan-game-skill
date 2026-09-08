@@ -15,11 +15,11 @@ because their story or assets constrain a component.
 Record:
 
 - platform and media type,
-- region, revision, and other identity discriminators,
+- region, revision, and other identifying details,
 - expected input sizes and hashes,
 - immutable baseline location or logical identifier,
 - provenance of inherited facts,
-- output identity policy.
+- output identity policy: expected hash or permitted differences and their checks.
 
 Keep additional `build_source` and `evidence_only` input identities in the
 composition scope and execution records. Link only the dependencies a host

@@ -45,9 +45,9 @@ Include or point to:
 
 ## Exclusion Checks
 
-Fail package validation when any payload or inventory entry violates its class
-rule in [Asset Distribution Policy](../strategy/asset-distribution-policy.md), or when required
-provenance and review data are missing.
+Fail validation when package contents violate
+[Asset Distribution Policy](../strategy/asset-distribution-policy.md) or required
+provenance and review records are missing.
 
 ## Clean-workspace Test
 
@@ -60,5 +60,5 @@ Repeat without the execution host and then without each required build source.
 Each build must fail closed before using a mismatched or missing input. The
 package may still expose its newly authored or generated material, metadata,
 and tooling, but it must not reconstruct meaningful original material from an
-omitted input. Record whether the negative conditions owned by the policy's
-Package Boundary hold; a violation fails this test.
+omitted input. Record whether these missing-input checks satisfy the policy's
+Package Boundary; any violation fails the test.

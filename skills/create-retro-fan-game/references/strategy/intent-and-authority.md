@@ -1,74 +1,61 @@
 # Intent And Authority
 
-This document owns how the agent helps the person choose the work and carries
-their authority forward. The person need not understand the engine to choose
-an experience or judge a result.
+Help the person choose an experience and judge the result without requiring
+engine knowledge. Preserve their decisions throughout the work.
 
 ## Make The Target Concrete
 
-Start from the request, existing decisions, and available game context. Identify
-the experience the person wants, the route where it matters, what must survive
-unchanged, and what would count as enough. Establish only what constrains the
-next action; do not require a complete design before investigating.
+Identify the desired experience, intended route, what must stay unchanged, and
+what would count as enough from the request and existing decisions. Resolve only
+what the next action needs; investigation does not require a complete design.
 
-When intent is unclear, investigate relevant source context and prepare a small
-reviewable sample: a scene, dialogue variant, visual comparison, or playable
-moment. Explain differences in character, tone, interaction, or content loss.
-Mark samples as provisional and distinguish a mockup from observed game output.
-Do not invent engine constraints to make an option seem settled.
+When intent is unclear, investigate the source context and prepare a small scene,
+dialogue variant, visual comparison, or playable moment. Explain its effects on
+character, tone, interaction, or content loss. Label provisional samples and
+distinguish mockups from observed game output. Do not invent engine constraints.
 
-For example, a wish to save a character may leave open whether later chapters
-acknowledge their survival. Show the consequences with a short scene and explain
-which routes need changes. The person chooses the meaning; the agent determines
-how to realize it. If that choice is already explicit, proceed with it.
+For example, saving a character may require choosing whether later chapters
+acknowledge their survival. Show a short scene and the affected routes so the
+person can choose the meaning. Proceed directly if that choice is already clear.
 
-Ask about consequential uncertainty early, while continuing independent work.
-Before asking for a final choice, complete the authorized investigation and
-sample work needed to make the alternatives assessable. Avoid questionnaires
-about technical means the agent can determine itself.
+Ask early about uncertainty affecting meaning or scope and continue independent
+work. Prepare the authorized investigation and samples needed to judge a final
+choice. Do not ask the person to select technical methods the agent can determine.
 
 ## Authority Boundary
 
-The request authorizes the investigation and routine implementation needed to
-fulfill it. The agent may choose technical methods, repair defects, and draft
-within the established creative constraints. Do not trade away the requested
-experience just because another result is easier to implement.
+The request authorizes necessary investigation and routine implementation. Choose
+technical methods, repair defects, and draft within its creative constraints.
+Do not sacrifice the requested experience for ease of implementation.
 
-Return unresolved choices that materially change premise, character, meaning,
-canon, tone, scope, quality, or acceptable loss to the person. Explain their
-visible effects and recommend an option with reasons. A technical limitation
-may justify proposing a tradeoff; it does not authorize choosing that tradeoff.
+Ask the person to resolve choices that materially change premise, character,
+meaning, canon, tone, scope, quality, or acceptable loss. Explain visible effects
+and recommend an option with reasons. Technical limits justify proposing a
+tradeoff, not choosing it without authorization.
 
-Pause only work that depends on the unresolved decision. Provisional exploration
-and independent technical work can continue within existing authorization.
-Time without a reply is not approval.
+Pause only dependent work. Continue authorized provisional exploration and
+independent technical work. Time without a reply is not approval.
 
 ## Carry Approval Forward
 
-An explicit request or prior choice is approval for its stated scope. The agent
-records that evidence; a missing formal record does not cancel the instruction
-or require the person to repeat it. Where no authorization can be recovered,
-keep the material choice pending rather than inventing consent.
+Record explicit requests and prior choices as approval for their stated scope;
+a missing formal record does not cancel them. If authorization cannot be
+recovered, keep the material choice pending.
 
-Approval of a direction supports drafting and implementation within it. It does
-not automatically approve every newly authored result. Apply the agreed review
-scope, which may cover a scene or coherent group rather than each line. The
-person may explicitly delegate lower-impact creative choices; record that scope
-and assess those choices against it. Routine technical methods need no separate
-creative delegation.
+Direction approval permits drafting and implementation, but does not approve
+every new result. Review content at the agreed scope, such as a scene or group
+of units. The person may explicitly delegate lower-impact creative choices;
+record and respect that scope. Technical methods need no creative delegation.
 
-Reopen a decision only when new work crosses its boundary, evidence changes its
-premises, or the person revises it. Explain the changed consequence instead of
-asking for the same approval again. Record decisions using
+Reopen a decision only when work crosses its scope, evidence changes its premises,
+or the person revises it. Explain what changed. Use
 [Creative Artifact States](../conventions/artifact-states.md#approval-record).
 
 ## Help The Person Judge The Result
 
-Present the changed experience with enough surrounding context to judge it.
-Separate what is playable and observed from drafts and technical possibilities.
-Ask for judgments about the work, such as whether a voice fits or a loss is
-acceptable; the agent owns technical investigation and mechanical checks.
+Present the changed experience in context. Ask whether a voice fits or a loss is
+acceptable; perform technical investigation and mechanical checks yourself.
 
-When direct observation is unavailable, first seek a usable observation method.
-If human observation is needed, provide a short route and the specific result
-to report. Do not shift debugger setup or unexplained diagnosis to the person.
+If available tools cannot provide the needed observation, seek another method.
+When human observation is necessary, provide a short route and a specific result
+to report, without shifting debugger setup or unexplained diagnosis to the person.

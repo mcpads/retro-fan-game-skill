@@ -18,11 +18,9 @@ playable surfaces; it does not acquire authority over the story.
 
 ## Start Or Resume
 
-Recover the intended route, source authority, current plan, and existing creative
-decisions before expanding the ledger. Use the project's current-state and
-approval owners when composed with other capabilities. When used alone, keep a
-stable entry to the selected source and plan revisions, assessment, unresolved
-choices, and next action in the existing narrative record.
+Recover the intended route, source authority, current plan, and creative decisions
+from existing project records. When used alone, keep selected source and plan
+revisions, assessment, unresolved choices, and next action in the narrative record.
 
 Carry explicit requests and prior approvals into that record without asking
 again. Ask about an unresolved material change to meaning, canon, or fidelity
@@ -40,7 +38,7 @@ approval of all subsequently authored content.
 - Preserve unknown source events, order, state, and edition relationships as
   gaps. Do not fabricate them to make a plan appear complete.
 - Emit narrative requirements for assets or host behavior; keep their physical
-  implementation and runtime evidence with their owners.
+  implementation and evidence in the relevant execution and observation records.
 
 ## Reference Routing
 
@@ -57,6 +55,6 @@ approval of all subsequently authored content.
 Produce the smallest sample, source claim, authored unit, binding, gap, or
 assessment that advances the narrative decision. Reference exact revisions of
 artifacts used in assessments; stable semantic IDs alone do not identify their
-contents. When evidence or intent changes, report affected plans, bindings, and
-assessments to their current-state owner. Preserve raw source evidence and
-unrelated decisions; do not carry a stale conformance pass onto a revised plan.
+contents. When evidence or intent changes, update current state with affected
+plans, bindings, and assessments. Preserve raw source evidence and unrelated
+decisions; do not carry a stale conformance pass onto a revised plan.

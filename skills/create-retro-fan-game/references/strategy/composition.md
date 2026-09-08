@@ -1,34 +1,29 @@
 # Capability Composition
 
-This document owns responsibility boundaries and capability selection. Creative
-policy, execution, and observation must remain independently replaceable even
-when one implementation performs all three.
+Choose tools and assign responsibilities so creative policy, execution, and
+observation remain replaceable, even within one implementation.
 
 ## Responsibilities
 
-| Responsibility | Owns | Record or policy |
+| Responsibility | Decides or records | Reference |
 | --- | --- | --- |
 | Creative authority | Intended experience and material creative tradeoffs | [Intent And Authority](intent-and-authority.md) |
 | Execution | Declared transforms and their mechanical checks | [Execution Records](../conventions/execution-records.md) |
 | Observation | Raw results, conditions, and collection limits | [Observation Records](../conventions/observation-records.md) |
-| Assessment | Interpretation of evidence and claim promotion | [Claim Assessments](../conventions/claim-assessments.md) |
+| Assessment | Whether the evidence satisfies a claim | [Claim Assessments](../conventions/claim-assessments.md) |
 
-Execution success proves that a declared transform completed. A connection,
-command response, or intermediate write does not prove downstream consumption.
-Runtime claims need evidence from the real game path, and neither execution nor
-observation grants creative approval.
+Execution success establishes that a transform completed. Runtime claims need
+evidence that the game actually used its result; neither proves creative approval.
 
-These are logical responsibilities, not mandatory files, services, or agents.
-A project record may hold separately addressable sections for a transform,
-observation, and assessment, provided the raw evidence remains unchanged when
-the interpretation changes. Preserve exact input references across those sections.
+One record may contain separately referenced sections for a transform,
+observation, and assessment. Preserve exact input references and keep raw evidence
+unchanged when the interpretation changes.
 
 ## Select Capabilities From The Claim
 
-Declare the decision and the success, failure, and ambiguity observables, then
-select an executor and observer capable of distinguishing them. Use the smallest
-sufficient combination of local tools, analysis, and human observation. Product
-names are provenance, never pass conditions.
+Define the decision and the observations that distinguish success, failure, and
+uncertainty. Choose tools, analysis, or human observation that can make those
+distinctions. Record tool names for traceability, not as pass conditions.
 
 When an available tool cannot distinguish the outcomes, investigate another
 method or keep the claim open. Do not substitute a weaker technical claim for
@@ -41,12 +36,12 @@ source conformance, cross-surface asset coherence, world reachability, and comba
 behavior have different evidence requirements; components need not share one
 project-wide mode.
 
-A capability may be supplied by the current agent's evidenced analysis, a
-compatible skill, or another tool. No separately installed specialist is required
-merely to satisfy a role name. If the available methods cannot assess the actual
-property, leave it open and work on its evidence gap or independent components.
+The current agent may perform the specialized analysis using evidence, a
+compatible skill, or another tool. A separate specialist is not required. If no
+available method can assess the property, investigate the gap or continue
+independent work while leaving the claim open.
 
-Consume references to domain-owned plans, mappings, assessment scope, outcomes,
+Reference specialized plans, mappings, assessment scope, outcomes,
 limits, and dependencies using the
 [Capability Handoff Record](../conventions/artifact-states.md#capability-handoff-record).
 Do not copy the domain's schema or transfer execution, observation, packaging,

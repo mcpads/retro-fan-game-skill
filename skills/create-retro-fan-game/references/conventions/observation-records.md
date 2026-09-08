@@ -30,8 +30,6 @@ Preserve:
 - whether the result is deterministic, replayable, or human-only,
 - collection failures, missing observables, and newly discovered limits.
 
-Do not add pass, fail, completion, or gate fields to this record. Do not rewrite
-the raw result to match a later conclusion. A later assessment references the
-observation ID and may be replaced without mutating this evidence.
-If a tool also returns its own verdict, retain the original tool response as
-evidence; only the consuming assessment can promote a project claim from it.
+Keep project verdicts in assessments, not raw observations. Preserve raw results
+when conclusions change. Retain any tool-supplied verdict as part of its original
+response; the project's assessment must decide whether it supports the claim.

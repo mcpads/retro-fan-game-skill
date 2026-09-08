@@ -1,15 +1,14 @@
 # Source-ledger Fields
 
-Reuse an existing source-narrative owner when it already records these
-meanings. Stable source IDs must not depend on a physical offset or on the
-target host.
+Reuse an existing source ledger that records this information. Keep source IDs
+independent of physical offsets and the target host.
 
 ## Source And Edition Registry
 
 For each relevant source or edition, record:
 
 - stable source-work and edition IDs,
-- title, platform or medium, revision, and other identity discriminators,
+- title, platform or medium, revision, and other identifying details,
 - scoped role defined in
   [Scoped Source Roles](../strategy/narrative-derivation.md#scoped-source-roles),
 - claims or units inside and outside that authority scope,
@@ -42,5 +41,5 @@ locator may be a script entry, file and section, database row, timestamp,
 address, or byte offset. Byte offsets are optional evidence coordinates, never
 the stable source-entry identity.
 
-Do not copy engine flags, host event IDs, build status, or runtime verdicts into
-the source ledger. Those belong to host, execution, or observation owners.
+Reference host bindings, execution records, and assessments for engine flags,
+host events, build status, and runtime verdicts; do not copy them into the ledger.

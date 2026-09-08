@@ -40,8 +40,8 @@ human-visible output.
 4. Fix the smallest confirmed cause.
 5. Add the failed claim to repeatable coverage when feasible.
 
-Preserve failed hypotheses when they eliminate a layer. Do not promote a
-workaround until its safety is supported well enough for the affected claim.
+Retain evidence that rules out a suspected cause. Adopt a workaround only when
+evidence supports its safety for the affected behavior.
 
 For a costly failure worth reusing, preserve the symptom, triggering input and
 scope, misleading evidence, confirmed cause, corrective check, and proof limits
@@ -51,6 +51,4 @@ a future decision; do not turn one game's measurements into universal rules.
 
 ## Completion Role
 
-Observation is one input to completion, not its owner. Exact private-playable
-and shareable-candidate criteria belong to
-[Workflow Gates](workflow-gates.md).
+Evaluate personal and shareable completion under [Workflow Gates](workflow-gates.md).

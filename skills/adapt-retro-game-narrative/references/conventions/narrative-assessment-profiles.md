@@ -1,21 +1,19 @@
 # Narrative Assessment Profiles
 
-Use the consuming project's claim-assessment envelope rather than inventing a
-second verdict format. This convention defines narrative-specific criteria that
-may populate that envelope.
-For standalone use, a section recording the claim, criteria, exact source and
-plan revisions, evidence references, outcome, limits, and next action is enough.
+Apply these criteria in the project's existing assessment record. When used alone,
+record the claim, criteria, exact source and plan revisions, evidence, outcome,
+limits, and next action in a section of the narrative record.
 
 ## Readiness Profile
 
-Before source-constrained narrative units enter broad build-bound production,
-assess the applicable dimensions:
+Before producing source-constrained narrative content for the build, check:
 
 - scoped source and edition authority is explicit,
 - required causal and state transitions are reconstructed,
 - ordering certainty and unresolved alternatives remain visible,
 - preservation invariants and intentional-change boundaries are declared,
-- source conflicts have an approval owner,
+- source conflicts affecting the scope are resolved by established precedence
+  or a human decision,
 - authored units and derivation relations cover the intended route,
 - required host bindings and domain dependencies are identified,
 - no comparison source or execution host was silently promoted to narrative
@@ -24,12 +22,12 @@ assess the applicable dimensions:
 Record `pass`, `fail`, or `inconclusive`, scope, evidence references, limits,
 and blocked downstream decisions.
 Unresolved alternatives may remain only where they cannot invalidate the proposed
-expansion. Assigning a conflict an owner does not resolve it. Provisional samples
-can help settle that conflict before readiness passes.
+expansion. Use provisional samples to settle relevant creative conflicts.
 
 ## Conformance Profile
 
-Select only criteria implied by each unit's declared relation:
+Conformance means following the approved relationship to each source, including
+intentional divergence. Select only criteria implied by that relationship:
 
 - source coverage and semantic preservation,
 - causal and state continuity,
@@ -39,16 +37,13 @@ Select only criteria implied by each unit's declared relation:
 - restoration confidence and invention boundary,
 - multi-source authority and conflict handling,
 - canon-constraint conformance,
-- authored-plan to playable-host realization coverage.
-
-A relation may pass conformance while changing source events when that change
-is the approved purpose. Do not collapse every relation into fidelity.
+- coverage of authored units in the playable game.
 
 Runtime evidence can show that the host consumed the bound unit and reached the
 required state. Human review decides meaning, canon, tone, and acceptable
 tradeoffs. Keep both evidence classes explicit in the assessment.
 
-When a source correction or creative decision changes a dependency, mark affected
-assessments invalid and notify the current-state owner. A changed host binding
-may require renewed realization evidence without invalidating source meaning or
-an unrelated approved scene. Retain earlier outcomes with their original scope.
+When source evidence or creative decisions change, invalidate affected assessments
+and update current state. Changed host bindings may need new runtime evidence
+without changing source meaning or an unrelated approved scene. Retain earlier
+outcomes with their original scope.

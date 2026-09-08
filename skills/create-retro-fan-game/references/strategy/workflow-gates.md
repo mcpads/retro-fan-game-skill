@@ -1,8 +1,10 @@
 # Workflow Gates
 
-This document owns admission and completion conditions. Evaluate only the gate
-relevant to the current scope. Gates restrict promotion, not the investigation
-needed to obtain their evidence. A pass must remain applicable under
+These gates define when to run experiments, expand production, or claim completion.
+Evaluate only the relevant gate. A gate must allow the investigation needed to
+establish its evidence. Here, production means preparing content and transforms
+for the game build; provisional samples remain exploratory. Check that earlier
+passes still apply under
 [Project State](../conventions/project-state.md#invalidation).
 
 ## Contents
@@ -31,8 +33,8 @@ An unidentified base permits read-only analysis, but no binary mutation.
 
 ## Experimental Work
 
-A bounded experiment may establish extraction, reconstruction, loader behavior,
-or other unknown structure before a surface is proven. Admit it when:
+A small experiment may establish extraction, reconstruction, loader behavior,
+or other unknown structure. Run it when:
 
 - local input identity and the proposed change's scope are established,
 - the hypothesis, unknowns under test, and distinguishing observable are recorded,
@@ -42,11 +44,10 @@ or other unknown structure before a surface is proven. Admit it when:
   selected playable, with a way to discard the result or restore the baseline,
 - a stopping condition identifies when to inspect the result rather than expand.
 
-Run applicable mechanical checks and retain failures as evidence. If a boundary
-cannot be established, inspect it before mutating. Do not require the experiment's
-runtime conclusion as a precondition for running it. An experimental result is
-not a production input or completed unit until the relevant promotion conditions
-pass. Adoption is recorded under
+Run applicable checks and retain failures as evidence. Inspect unknown write
+boundaries before mutation, but do not require the test's conclusion in advance.
+Use experimental results in production only after the applicable proof gates pass.
+Record adoption under
 [Project State](../conventions/project-state.md#research-experiments-and-adopted-work).
 
 ## Relevant-surface Proof Gate
@@ -62,6 +63,7 @@ Proof of a rebuilt container alone does not prove its changed runtime behavior.
 
 ## Creative-unit PoC Gate
 
+PoC means proof of concept: one changed unit demonstrates the intended behavior.
 Pass when one minimal changed line, scene, asset, rule, cue, or route branch:
 
 - has relevant surface proof and builds from the verified inputs with the
@@ -78,7 +80,7 @@ code need not survive adoption.
 
 ## Overlay Expansion Gate
 
-Allow broader build-bound production only for the proven surface and dependencies
+Allow broader production only for the proven surface and dependencies
 of a passing PoC. Track units using the applicable axes in
 [Creative Artifact States](../conventions/artifact-states.md). Drafting does not
 require each unit's runtime pass in advance; completion does.
@@ -112,5 +114,4 @@ Evaluate only when sharing is in scope. Pass when the private-playable gate hold
 across the declared shareable scope, remaining limits are declared, and both
 [Asset Distribution Policy](asset-distribution-policy.md) and
 [Package Manifest](../conventions/package-manifest.md) checks pass, including input
-identity enforcement and clean-workspace reconstruction. This gate consumes
-those owners rather than redefining their requirements.
+identity enforcement and clean-workspace reconstruction.

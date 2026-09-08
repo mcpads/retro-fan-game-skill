@@ -1,8 +1,8 @@
 # Asset Assembly
 
-Asset assembly owns the semantic layer between creative intent and proven host
-surfaces. It applies when several assets represent one concept, one asset must
-serve several surfaces, or source-aware continuity and coverage matter.
+Asset assembly connects intended meaning to game surfaces. Use it when several
+assets represent one concept, one asset serves several surfaces, or source
+continuity and coverage matter.
 
 ## Open Asset Profiles
 
@@ -38,13 +38,12 @@ Keep the flow separable:
 
 `source or authored intent -> semantic asset unit -> host-surface mapping`
 
-The host structure owner supplies physical budgets. The provenance owner
-records newly authored or generated artifacts. Execution owns conversion and
-writes. Observation owns raw display or playback evidence. The assessment
-combines references without copying them.
+Reference physical budgets in the structure map, asset origins in provenance
+records, conversions and writes in execution records, and display or playback
+evidence in observations. Assess those records without copying their contents.
 
 Use [Asset Assessment Profiles](../conventions/asset-assessment-profiles.md) for
-readiness before broad build-bound production and for applicable completion
+readiness before producing assets for the build and for applicable completion
 claims. Small provisional samples can establish the intended identity before
 full production readiness.
 

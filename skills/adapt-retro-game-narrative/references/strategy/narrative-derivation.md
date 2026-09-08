@@ -49,13 +49,12 @@ Keep three layers distinct:
 
 `source evidence -> authored narrative derivation -> host binding`
 
-Source ledgers own claims about existing works. Narrative plans own what the
-new work says and how it derives from zero or more source claims. Host bindings
-own where those authored units may appear. Execution and observation remain
-downstream owners.
+Source ledgers describe existing works. Narrative plans describe the new work
+and its relationship to source claims. Host bindings locate authored units in
+the game; execution and observation record implementation and runtime evidence.
 
 Use [Narrative Assessment Profiles](../conventions/narrative-assessment-profiles.md)
-to judge readiness for build-bound expansion and conformance for completion.
+to judge readiness for the build and conformance for completion.
 Provisional samples may explore a relation before those assessments pass.
 
 ## Review Meaning In Context

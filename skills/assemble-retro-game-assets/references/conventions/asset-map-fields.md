@@ -29,16 +29,15 @@ Record:
 - one or more asset-unit IDs,
 - one or more target host-surface IDs,
 - route, state, actor, item, map, cutscene, battle, or interface context,
-- physical binding intent by reference to the host owner,
+- intended use or modification of the host surface, by reference to its structure
+  record,
 - structure-proof and relevant budget references,
 - provenance, transform, inserted-resource, observation, and assessment IDs,
 - adjacent representations that must remain coherent,
 - unresolved host gaps and the claims they block.
 
-Interpret physical binding intent under
-[Separate Semantic And Physical Relations](../strategy/asset-assembly.md#separate-semantic-and-physical-relations);
-its mechanics and pass conditions remain with the host structure and execution
-owners.
+The host structure and execution records define the binding's mechanics and
+checks. See [Separate Semantic And Physical Relations](../strategy/asset-assembly.md#separate-semantic-and-physical-relations).
 
 Do not include byte writes, conversion settings, copied evidence, or a final
 coherence verdict.

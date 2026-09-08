@@ -19,10 +19,9 @@ an ordinary asset-editing workflow.
 ## Start Or Resume
 
 Recover the intended experience, selected asset set, required representations,
-and existing creative decisions. Use the project's current-state and approval
-owners when composed with other capabilities. When used alone, keep a stable
-entry to the selected catalog and mapping revisions, assessment, unresolved
-choices, and next action in the existing asset record.
+and creative decisions from existing project records. When used alone, keep
+selected catalog and mapping revisions, assessment, unresolved choices, and
+next action in the asset record.
 
 Carry explicit requests and prior approvals forward without asking again. Use a
 small comparison of related representations to clarify unresolved identity or
@@ -39,10 +38,10 @@ subsequently generated asset.
   split across several host surfaces.
 - Reuse existing catalogs and maps. Semantic units, bindings, and assessments may
   be separately addressable sections of one artifact.
-- Refer to host-owned format budgets, provenance-owned generation records, and
-  execution-owned transforms instead of copying them into the semantic catalog.
+- Reference format budgets, generation provenance, and transforms in their
+  existing records instead of copying them into the semantic catalog.
 - Keep collision, reachability, combat behavior, and interface actions with
-  their domain owners. An asset change cannot silently redefine them.
+  the relevant domain analysis. An asset change cannot silently redefine them.
 
 ## Reference Routing
 
@@ -59,5 +58,5 @@ Produce the smallest sample, unit, mapping, coverage gap, or assessment that
 advances the asset decision. Reference exact source and mapping revisions in
 assessments. Keep semantic identity stable across file renames and conversions,
 while invalidating affected assessments when the represented content changes.
-Return those dependencies to the current-state owner; runtime visibility alone
+Update current state with those dependencies; runtime visibility alone
 cannot establish aesthetic approval or cross-surface coherence.

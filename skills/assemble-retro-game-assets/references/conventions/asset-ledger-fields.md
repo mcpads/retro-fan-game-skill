@@ -1,6 +1,6 @@
 # Asset-ledger Fields
 
-Reuse an existing semantic asset catalog when it already owns these meanings.
+Reuse an existing asset catalog that records these meanings.
 Keep semantic IDs stable across file renames, conversions, sheet repacking, and
 host relocation.
 
@@ -39,6 +39,5 @@ The group may connect a character's field sprite, battle representation,
 portrait, cutscene frames, and UI icon without assuming they share a physical
 format.
 
-Do not copy palette, tile, frame, memory, compression, conversion, loader, or
-runtime fields into this record. Point to the relevant structure and downstream
-owners.
+Reference structure, execution, and observation records for format budgets,
+conversion, loading, and runtime results instead of copying those fields.

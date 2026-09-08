@@ -1,24 +1,19 @@
 # Optional Patch Package
 
 Open this branch only when the person requests sharing or the project has
-already declared a shareable scope. Packaging is not required to create,
-complete, or consume a private fan game.
+already declared it in scope. Packaging is not required for personal completion.
 
 ## Package Claim
 
-Let another owner reproduce the declared local target from their verified
-execution host and any additional required build-source originals. Apply the
-classifications and negative boundary owned by
-[Asset Distribution Policy](asset-distribution-policy.md); do not redefine that
-boundary in the packaging branch. Use
-[Package Manifest](../conventions/package-manifest.md) for concrete inventory and
-clean-workspace requirements.
+Let another person reproduce the target from their verified host game and any
+required source games. Apply [Asset Distribution Policy](asset-distribution-policy.md)
+to package contents and [Package Manifest](../conventions/package-manifest.md)
+to inventory and reconstruction checks.
 
 ## Shareable Surface
 
-Inventory each candidate artifact under the distribution policy. Include only
-the transforms, metadata, new work, evidence, and limitations permitted by its
-classification, with the provenance and dependencies required by the manifest.
+Inventory candidate files by asset class, provenance, and dependencies. Include
+only what the policy permits, with the evidence and limits the manifest requires.
 
 ## Safety Dependencies
 
@@ -28,10 +23,7 @@ classification, with the provenance and dependencies required by the manifest.
   missing dependencies, or invalid final identity.
 - Include inserted-resource data only when its registry and runtime evidence are
   complete for the declared package scope.
-- Pass the clean-workspace test owned by
-  [Package Manifest](../conventions/package-manifest.md) before promoting a shareable
-  candidate.
+- Pass the manifest's clean-workspace test before declaring a shareable candidate.
 
-Expected writes and execution receipts are owned by
-[Execution Records](../conventions/execution-records.md); exact candidate criteria are
-owned by [Workflow Gates](workflow-gates.md).
+Use [Execution Records](../conventions/execution-records.md) for writes and receipts,
+and [Workflow Gates](workflow-gates.md) for candidate criteria.

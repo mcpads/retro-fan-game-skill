@@ -1,22 +1,20 @@
 # Asset Assessment Profiles
 
-Use the consuming project's claim-assessment envelope. This convention
-supplies asset-specific criteria without replacing execution, observation, or
-human approval records.
-For standalone use, a section recording the claim, criteria, exact catalog and
-mapping revisions, evidence references, outcome, limits, and next action is enough.
+Apply these criteria in the project's existing assessment record. When used alone,
+record the claim, criteria, exact catalog and mapping revisions, evidence, outcome,
+limits, and next action in a section of the asset record.
 
 ## Readiness Profile
 
-Before broad build-bound asset production, assess the applicable dimensions:
+Before producing an asset set for the build, check:
 
-- intended route and asset component are bounded,
+- intended route and asset component have defined scope,
 - required semantic units, variants, states, and surfaces are inventoried,
 - source relationships and authority are explicit when adaptation is claimed,
 - continuity groups and intentional differences are declared,
 - every required host surface has a structure-proof reference or visible gap,
-- cross-domain narrative, world, system, and interface requirements have
-  owners,
+- related narrative, world, system, and interface requirements identify who or
+  what assesses them,
 - generation, conversion, insertion, and observation dependencies are
   identified without being copied into the asset map.
 
@@ -37,15 +35,14 @@ Select only the claims relevant to the asset component:
 - playable realization: mapped assets are consumed in the intended host
   contexts without breaking relevant adjacent representations.
 
-An asset may pass runtime consumption and fail coherence or source conformance.
-It may also pass coherence while intentionally differing from a source. Keep
-the declared relation and approval record visible in the assessment.
+Correct display does not prove coherence or source conformance. An intentional,
+approved departure from a source need not fail coherence.
 
 Runtime evidence decides display, playback, state selection, and route coverage
 claims. The person decides aesthetic meaning, tone, recognizable identity, and
 acceptable tradeoffs.
 
 When source, selected artwork, required variants, or mappings change, invalidate
-dependent assessments and notify the current-state owner. A physical repacking
+dependent assessments and update current state. A physical repacking
 may need new runtime evidence while leaving approved semantic identity intact.
 Retain earlier outcomes with their exact original dependencies.
