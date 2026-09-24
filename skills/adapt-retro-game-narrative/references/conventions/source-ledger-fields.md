@@ -16,8 +16,6 @@ For each relevant source or edition, record:
 - precedence or human conflict-decision reference when scopes overlap,
 - evidence provenance and unresolved identity questions.
 
-Calling a source the execution host does not grant narrative authority.
-
 ## Scene Or Canon-constraint Entry
 
 Record:
@@ -38,8 +36,6 @@ Record:
 A locator records its kind, source identity, stable logical entry when
 available, and a physical coordinate only when the medium provides one. A
 locator may be a script entry, file and section, database row, timestamp,
-address, or byte offset. Byte offsets are optional evidence coordinates, never
-the stable source-entry identity.
-
-Reference host bindings, execution records, and assessments for engine flags,
-host events, build status, and runtime verdicts; do not copy them into the ledger.
+address, or byte offset; the stable source-entry ID stays separate from any
+physical coordinate. Engine flags, host events, and runtime results stay in
+host bindings and execution records.

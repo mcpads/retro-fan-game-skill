@@ -11,10 +11,10 @@ description: >-
 
 # Assemble Retro Game Assets
 
-Define what an asset means and which game surfaces must express it. Keep semantic
-assembly distinct from generation, conversion, physical insertion, and runtime
-observation. A single icon or portrait with no wider relationship can remain in
-an ordinary asset-editing workflow.
+Define what an asset means and which game surfaces in the intended play segments
+must express it. Keep semantic assembly distinct from generation, conversion,
+physical insertion, and runtime observation. A single icon or portrait with no
+wider relationship belongs to an ordinary asset-editing workflow.
 
 ## Start Or Resume
 
@@ -26,13 +26,14 @@ next action in the asset record.
 Carry explicit requests and prior approvals forward without asking again. Use a
 small comparison of related representations to clarify unresolved identity or
 aesthetic choices. The person judges their meaning and acceptable differences;
-the agent investigates technical fit. Direction approval does not approve every
-subsequently generated asset.
+the agent investigates technical fit. Generated assets are reviewed at the
+agreed scope after direction approval.
 
 ## Work At The Needed Scope
 
 - Group represented entities, places, items, states, cues, and their required
-  variants across the intended route. Profiles are open labels, not a fixed enum.
+  variants across the intended segments. Establish what each surface tells the
+  player and which game state selects each variant. Profiles are open labels.
 - Keep semantic relations independent of physical host bindings. One character
   may require field, portrait, and battle representations; one source sheet may
   split across several host surfaces.
@@ -40,8 +41,8 @@ subsequently generated asset.
   be separately addressable sections of one artifact.
 - Reference format budgets, generation provenance, and transforms in their
   existing records instead of copying them into the semantic catalog.
-- Keep collision, reachability, combat behavior, and interface actions with
-  the relevant domain analysis. An asset change cannot silently redefine them.
+- Collision, reachability, combat behavior, and interface actions stay with
+  their domain analysis.
 
 ## Reference Routing
 
@@ -58,5 +59,6 @@ Produce the smallest sample, unit, mapping, coverage gap, or assessment that
 advances the asset decision. Reference exact source and mapping revisions in
 assessments. Keep semantic identity stable across file renames and conversions,
 while invalidating affected assessments when the represented content changes.
-Update current state with those dependencies; runtime visibility alone
-cannot establish aesthetic approval or cross-surface coherence.
+Update current state with those dependencies. Runtime visibility shows display;
+aesthetic approval and cross-surface coherence come from the person and the
+coherence assessment.

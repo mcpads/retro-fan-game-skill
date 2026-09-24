@@ -1,125 +1,69 @@
 # Creative Artifact States
 
-Track creative approval, build validity, and runtime observation separately.
-Group units only when they share scope and evidence; split a group when approval
-or validation differs. Use sections of existing project data where practical.
+Record creative units through the play segments that consume them. Keep these
+records in existing project data; group units that share scope and evidence.
 
 ## Composition Scope Record
 
-For the intended playable route, record:
-
-- exact execution-host input identity,
-- additional original input identities and their role as `build_source` or
-  `evidence_only`,
-- stable creative component IDs and open domain labels,
-- each component's semantic source relationship and target host-surface IDs,
-- dependencies between components,
-- approval boundary and completion claims,
-- specialized assessment references when required.
-
-Define each component's relationship to its sources under
-[Creative Overlay](../strategy/creative-overlay.md#component-graph). The scope
-record holds what was decided; current status and blockers belong to the
-current entry under [Project State](project-state.md), so the scope record does
-not go stale as work advances.
+For the intended route, record the
+[execution host](structure-map-fields.md#base-identity)'s identity, other
+originals and their [role](execution-records.md#input-scope), stable component
+IDs, each component's source relationship and target surfaces, dependencies, and the
+approval boundary. Current status belongs to the
+[current entry](project-state.md), so this record holds decisions only.
 
 ## Capability Handoff Record
 
-For a component that requires specialized domain judgment, record:
-
-- stable handoff and component IDs,
-- capability class and the claim it is expected to decide,
-- prepared source, plan, mapping, or constraint artifact IDs and exact revisions,
-- readiness or conformance assessment IDs,
-- outcome read from the referenced assessment: `pass`, `fail`, or
-  `inconclusive`,
-- assessed scope, limits, unresolved gaps, and blocked dependencies,
-- dependencies whose changes require reassessment.
-
-The handoff references the specialized records and reads their assessment outcome;
-it must not assign a separate verdict. A missing assessment leaves only the
-dependent claims open.
+When a component needs specialized judgment, record the claim it decides, the
+exact plan or mapping revisions handed over, the referenced assessment and its
+outcome (`pass`, `fail`, `inconclusive`), its scope and gaps, and what would
+require reassessment. The handoff reads the outcome; it assigns no verdict.
 
 ## Creative Brief Record
 
-For each bounded unit or group of units, record:
-
-- stable unit and target surface IDs,
-- intended route and creative purpose,
-- references to premise decisions and relevant character, relationship, or world
-  state, distinguishing approved intent from provisional choices,
-- glossary, naming, voice, and continuity constraints,
-- required flags, branches, portraits, cues, or other runtime elements,
-- references to proven structure budgets,
-- forbidden contradictions and out-of-scope changes,
-- unresolved creative questions and unresolved structure gaps.
-
-The brief may exist provisionally before the surface is build-ready. Label
-unknowns; do not convert them into invented facts.
+Give the author what the current unit needs: its segment and purpose, approved
+premise and character state, voice and naming constraints, required runtime
+elements such as flags, portraits, or cues, proven budgets, contradictions to
+avoid, and open creative or structure questions, labeled as open.
 
 ## Approval Record
 
-Apply [Intent And Authority](../strategy/intent-and-authority.md) to material
-creative decisions. Record routine technical methods in execution or research
-records. For each material creative decision, record:
-
-- decision ID, class, affected units or revisions, and review scope,
-- authority evidence: the explicit request, prior choice, or project decision
-  reference, with enough context to preserve its meaning,
-- approval owner: `human` or `delegated_agent`,
-- the explicit delegation scope when the owner is `delegated_agent`,
-- chosen result, unresolved effects, and rationale or alternatives when relevant,
-- status: `pending`, `approved`, `rejected`, or `superseded`.
-
-Identify whether approval covers a direction or produced content. Recover missing
-records from existing instructions and decisions; do not request approval again
-just to fill these fields.
+For each material creative decision, record the affected units, the authority
+(the person's request, prior choice, or explicit delegation and its scope), the
+chosen result, and status: `pending`, `approved`, `rejected`, or `superseded`.
+For produced content, record the accepted file's content hash with the person's
+words. Record the agent's interpretation of those words as a proposal until the
+person confirms it. Recover earlier approvals from existing instructions and
+decisions rather than asking again.
 
 ## State Axes
 
-Track creative, build, observation, and issue state as separate axes. A project
-may use its own labels, but each axis must stay decidable on its own; do not fold
-several axes into one label. A provisional sample does not need build or
-observation records before anyone can review it. Default labels:
+Track production units on four separate axes; a provisional sample can be
+reviewed before it has build or observation states:
 
-| Axis | Values | Meaning |
-| --- | --- | --- |
-| Creative | `provisional`, `draft`, `approved`, `rejected` | Whether the content is authored and approved inside the recorded authority boundary |
-| Build | `unbound`, `encoded`, `statically_valid`, `failed` | Whether it is represented by the target format and passes applicable deterministic checks |
-| Observation | `unobserved`, `pass`, `fail`, `inconclusive` | Whether the declared runtime claim has sufficient evidence |
-| Issue | `open`, `clear` | Whether a known issue still blocks the unit's declared route |
+| Axis | Values |
+| --- | --- |
+| Creative | `provisional`, `draft`, `approved`, `rejected` |
+| Build | `unbound`, `encoded`, `statically_valid`, `failed` |
+| Observation | `unobserved`, `pass`, `fail`, `inconclusive` |
+| Issue | `open`, `clear` |
 
-A production unit is complete when approved for its review scope, statically
-valid, supported by an applicable runtime pass, and free of blocking issues.
-Tie states to exact content and build identities. Read the observation status
-from its assessment and reset outdated statuses under
-[Project State](project-state.md#invalidation). Product completion follows
-[Workflow Gates](../strategy/workflow-gates.md).
+A unit is complete when approved, statically valid, observed passing in its
+segment on the selected build, and clear of blocking issues. Tie states to exact
+content and build identities, and reset them under
+[Invalidation](project-state.md#invalidation).
 
 ## Placeholders
 
 A placeholder stands in for intended content so connection and progression can
-be built and observed early. Record what it replaces, the intended final content,
-and the claims it cannot support. It may be build-valid and observed; its
-creative state stays provisional until it is replaced or the person accepts it
-as final. Renaming, recoloring, or relabeling a placeholder does not complete the
-unit. Report open placeholders with the route status.
+be built and observed early. Record what it replaces and the intended final
+content. Its creative state stays provisional until it is replaced or the person
+accepts it as final. Report open placeholders with the route status.
 
 ## Authored Or Generated Asset Provenance
 
-When an asset is newly authored or generated, record:
-
-- source class and human source note or generation prompt reference,
-- identity and origin of each style, pose, or sound reference under
-  [Reference Identity](../strategy/creative-review.md#reference-identity),
-- author, generator capability, or model identity when relevant,
-- rights or usage assumption,
-- source and converted artifact hashes,
-- conversion transform and configuration references,
-- target surface and conditional inserted-resource IDs,
-- semantic asset-unit, mapping, or capability-handoff IDs when the asset belongs
-  to a multi-surface component,
-- the four state axes and their evidence references.
-
-Do not place original game images or extracted original assets in a generation
-provenance bundle.
+For a new asset, record its source class, author or generator, prompt or source
+note, the origin of each reference under
+[Reference Identity](../strategy/creative-review.md#reference-identity), rights
+assumption, source and converted hashes, conversion settings, target surface,
+and its four state axes. Generation bundles contain authored material only.

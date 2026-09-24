@@ -14,7 +14,7 @@ description: >-
 Turn relevant source evidence into an authored narrative that expresses the
 person's chosen relationship to the original. Keep source meaning, authored
 changes, and host implementation distinguishable. The execution host supplies
-playable surfaces; it does not acquire authority over the story.
+playable surfaces; story authority comes from the sources and the person.
 
 ## Start Or Resume
 
@@ -24,19 +24,19 @@ revisions, assessment, unresolved choices, and next action in the narrative reco
 
 Carry explicit requests and prior approvals into that record without asking
 again. Ask about an unresolved material change to meaning, canon, or fidelity
-with a contextual sample and its consequences. Routine investigation and drafting
-within the established direction can proceed. Direction approval does not imply
-approval of all subsequently authored content.
+with a contextual sample and its consequences. Investigate and draft within the
+established direction; the resulting content is reviewed at the agreed scope.
 
 ## Work At The Needed Scope
 
-- Normalize only scenes and canon constraints needed by the intended route.
+- Normalize the scenes and canon constraints the play segments in progress need.
 - Separate source evidence, authored narrative units, and host bindings. These
   may be separately addressable sections of one project artifact.
 - Let preservation, divergence, continuation, and other relations coexist at
   unit scope; assess each against its intended relation.
-- Preserve unknown source events, order, state, and edition relationships as
-  gaps. Do not fabricate them to make a plan appear complete.
+- Keep unknown source events, order, state, and edition relationships as
+  labeled gaps. Before writing a beat the source seems to lack, search the
+  source for it.
 - Emit narrative requirements for assets or host behavior; keep their physical
   implementation and evidence in the relevant execution and observation records.
 
@@ -56,5 +56,5 @@ Produce the smallest sample, source claim, authored unit, binding, gap, or
 assessment that advances the narrative decision. Reference exact revisions of
 artifacts used in assessments; stable semantic IDs alone do not identify their
 contents. When evidence or intent changes, update current state with affected
-plans, bindings, and assessments. Preserve raw source evidence and unrelated
-decisions; do not carry a stale conformance pass onto a revised plan.
+plans, bindings, and assessments; a revised plan needs its own conformance
+assessment. Preserve raw source evidence and unrelated decisions.

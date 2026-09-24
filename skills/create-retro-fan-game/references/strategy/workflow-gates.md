@@ -1,130 +1,100 @@
 # Workflow Gates
 
-These gates define when to run experiments, expand production, or claim completion.
-Evaluate only the relevant gate. A gate must allow the investigation needed to
-establish its evidence. Production expansion goes beyond bounded samples or
-experiments, which may include isolated in-game builds. Check that earlier
-passes still apply under
-[Project State](../conventions/project-state.md#invalidation).
-
-## Contents
-
-- [Intent And Base Identity Gate](#intent-and-base-identity-gate)
-- [Experimental Work](#experimental-work)
-- [Relevant-surface Proof Gate](#relevant-surface-proof-gate)
-- [Creative-unit PoC Gate](#creative-unit-poc-gate)
-- [Overlay Expansion Gate](#overlay-expansion-gate)
-- [Private Playable Gate](#private-playable-gate)
-- [Shareable Candidate Gate](#shareable-candidate-gate)
+These gates decide when to experiment, expand production, or claim completion.
+Evaluate the gate the next decision needs; each gate admits the investigation
+that produces its evidence. Earlier passes hold while their inputs are current
+under [Invalidation](../conventions/project-state.md#invalidation).
 
 ## Intent And Base Identity Gate
 
-Pass when the intended route, allowed changes, completion target, authority
-boundary, and exact local inputs are known well enough to constrain the next
-mutation. Interpret existing authorization using
-[Intent And Authority](intent-and-authority.md).
+Passes when the intended route and its first segment, allowed changes,
+completion target, authority boundary, and exact local inputs are known well
+enough to constrain the next mutation. Identify one execution host and assign
+roles to other originals under
+[Input Scope](../conventions/execution-records.md#input-scope).
 
-Identify one execution host and classify additional originals as required build
-sources or evidence-only sources under
-[Input Scope](../conventions/execution-records.md#input-scope). Preserve inherited
-claims' provenance; a source role does not grant host-structure or narrative authority.
-
-Unresolved intent permits relevant investigation and provisional samples.
-An unidentified base permits read-only analysis, but no binary mutation.
+Before it passes, investigation and provisional samples proceed; an
+unidentified base allows read-only analysis.
 
 ## Experimental Work
 
-A small experiment may establish extraction, reconstruction, loader behavior,
-or other unknown structure. Run it when:
+A small experiment may establish extraction, reconstruction, loader behavior, or
+other unknown structure. Run it when:
 
-- local input identity and the proposed change's scope are established,
-- the hypothesis, unknowns under test, and distinguishing observable are recorded,
-- expected writes and source conditions are bounded under
+- local input identity and the change's scope are established,
+- the hypothesis and the observable that decides it are recorded,
+- expected writes are bounded under
   [Execution Records](../conventions/execution-records.md),
 - output and runtime state are isolated from originals, personal saves, and the
-  selected playable, with a way to discard the result or restore the baseline,
-- a stopping condition identifies when to inspect the result rather than expand.
+  selected playable, with a way back to the baseline,
+- a stopping condition says when to inspect rather than expand.
 
-Run applicable checks and retain failures as evidence. Inspect unknown write
-boundaries before mutation, but do not require the experiment's conclusion in advance.
-Use experimental results in production only after the applicable proof gates pass.
-Record adoption under
+Keep failures as evidence. Experimental results enter production after the proof
+gates below pass, recorded under
 [Project State](../conventions/project-state.md#research-experiments-and-adopted-work).
 
 ## Relevant-surface Proof Gate
 
-Pass for the proposed scope when extraction or parsing preserves required data,
-reconstruction is proven, mutable and protected parts are distinguished, relevant
-budgets and relocation rules are measured, and no unresolved gap invalidates the
-proposed production use. Record the evidence in
-[Structure-map Fields](../conventions/structure-map-fields.md).
-
-Failure keeps that production use provisional while allowing bounded experiments.
-Proof of a rebuilt container alone does not prove its changed runtime behavior.
+Passes for a proposed use when extraction preserves the required data,
+reconstruction is proven, mutable and protected parts are distinguished, budgets
+and relocation rules are measured, and no open gap undermines that use. A rebuilt
+container proves reconstruction; its changed runtime behavior needs the PoC.
 
 ## Creative-unit PoC Gate
 
-PoC means proof of concept: one changed unit demonstrates the intended behavior.
-Pass when one minimal changed line, scene, asset, rule, cue, or route branch,
-exercised inside its play segment:
+A proof of concept shows one changed line, scene, asset, rule, cue, or branch
+working inside its play segment. It passes when that unit:
 
-- has relevant surface proof and builds from the verified inputs with the
-  applicable execution checks passing,
-- is consumed through the real game path with sufficient raw evidence for the
-  declared claim, and
-- preserves relevant adjacent content, control, state, timing, and save/load
-  behavior.
+- has surface proof and builds from the verified inputs with checks passing,
+- is consumed through the real game path with evidence for the claim, and
+- preserves adjacent content, control, state, timing, and save/load behavior.
 
-For insertion, the PoC must establish the affected resource chain and adjacent
-resource behavior specified in [Resource Insertion](resource-insertion.md).
-Preserve measured constraints, repeatable transforms, and evidence; experimental
-code need not survive adoption.
+For insertion, the PoC also covers the resource chain and adjacent behavior in
+[Resource Insertion](resource-insertion.md). Keep measured constraints,
+repeatable transforms, and evidence; experimental code may be discarded.
+
+## Segment Playable Gate
+
+A segment is playable when it is played through on the selected build from its
+entry to its exit, including the transitions into and out of it and resumption
+after saving, with its changed units observed and its placeholders listed. The
+next segment builds on it.
 
 ## Overlay Expansion Gate
 
-Allow broader production only for the proven surface and dependencies
-of a passing PoC. Track units using the applicable axes in
-[Creative Artifact States](../conventions/artifact-states.md). Drafting does not
-require each unit's runtime pass in advance; completion does.
-
-A component claiming source conformance, asset coherence, behavior equivalence,
-reachability, or another specialized property also needs a scoped passing
-readiness assessment for the proposed expansion and its dependencies from the
-applicable domain capability. This assessment does not gate the bounded experiments
-or PoC needed to establish readiness. Components making no such claim inherit no
-extra domain gate. Reassess when expansion introduces a different format, loader
-path, or unproven dependency.
+Production extends to further segments that use the surfaces and dependencies
+of a passing PoC and a playable segment. Units
+may be drafted ahead of their runtime pass; completion needs it. A component
+claiming source conformance, asset coherence, reachability, or another
+specialized property also needs a passing assessment from that domain for the
+expansion. Reassess when expansion brings a different format, loader, or
+dependency.
 
 ## Private Playable Gate
 
-Complete the work for its intended personal route only when:
+The work is complete for its intended personal route when:
 
-- exact execution-host and required build-source inputs are validated locally,
-- the selected output includes all adopted changes for that scope and is
-  reproducible through the
-  [Product Build Path](../conventions/execution-records.md#product-build-path),
-- required creative decisions and content are approved within their review scope,
-- applicable specialized completion claims have scoped passing assessments,
-- every changed surface on that route has sufficient game-visible evidence
-  applicable to the selected build under
+- the execution host and required build sources are validated locally,
+- the selected output contains every adopted change and is reproducible through
+  the [Product Build Path](../conventions/execution-records.md#product-build-path),
+- required creative content is approved at its review scope,
+- specialized completion claims have current passing assessments,
+- every changed surface on the route has game-visible evidence that applies to
+  the selected build under
   [Claim Assessments](../conventions/claim-assessments.md#evidence-from-another-build),
-- the route has been played continuously on the selected build from its declared
-  start to its end, including transitions between segments, required branches,
-  and save/load resumption,
-- no placeholder remains on the route unless the person accepted it as final, and
-- known critical runtime, story-state, save/load, route, and required-asset issues
-  are zero for that route.
+- the route has been played continuously on the selected build from start to
+  end, through segment transitions, required branches, and save/load resumption,
+- every placeholder on the route is replaced or accepted by the person as final,
+- critical runtime, story-state, save/load, route, and required-asset issues on
+  the route are zero.
 
-An invalidated or mismatched assessment cannot support completion. Unobserved
-changed routes remain open. Segment observations, even when applicable to the
-selected build, do not establish the transitions a continuous playthrough
-covers. Distribution checks are not part of personal
-completion; the person may stop here with a complete work.
+The continuous playthrough is the proof that segments join; separate segment
+observations cover their segments.
 
 ## Shareable Candidate Gate
 
-Evaluate only when sharing is in scope. Pass when the private-playable gate holds
-across the declared shareable scope, remaining limits are declared, and both
+When sharing is in scope, passes when the private playable gate holds across the
+shared scope, remaining limits are declared, and the checks in
 [Asset Distribution Policy](asset-distribution-policy.md) and
-[Package Manifest](../conventions/package-manifest.md) checks pass, including input
-identity enforcement and clean-workspace reconstruction.
+[Package Manifest](../conventions/package-manifest.md) pass, including
+clean-workspace reconstruction.

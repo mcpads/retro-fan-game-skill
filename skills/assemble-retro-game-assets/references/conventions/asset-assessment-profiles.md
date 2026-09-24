@@ -21,12 +21,11 @@ check the proposed scope and its dependencies:
   identified without being copied into the asset map.
 
 Record `pass`, `fail`, or `inconclusive`, scope, evidence references, limits,
-and blocked downstream decisions.
-A visible gap is not a passing result when it could invalidate the proposed
-production scope. Provisional samples and isolated in-game experiments may resolve
-these gaps before readiness passes, under the project's experimental execution
-checks. They do not establish readiness for broader production or waive completion
-claims.
+and blocked downstream decisions. Readiness passes when no visible gap could
+invalidate the proposed production scope. Provisional samples and isolated
+in-game experiments may resolve these gaps first, under the project's
+experimental execution checks; readiness and completion still need their own
+evidence.
 
 ## Completion Profiles
 
@@ -39,8 +38,9 @@ Select only the claims relevant to the asset component:
 - playable realization: mapped assets are consumed in the intended host
   contexts without breaking relevant adjacent representations.
 
-Correct display does not prove coherence or source conformance. An intentional,
-approved departure from a source need not fail coherence.
+Coherence and source conformance are judged against the approved identity and
+declared relation, including approved departures from a source; correct display
+is separate evidence.
 
 Runtime evidence decides display, playback, state selection, and route coverage
 claims. The person decides aesthetic meaning, tone, recognizable identity, and

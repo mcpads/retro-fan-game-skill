@@ -15,17 +15,16 @@ Profiles may include:
 - items, equipment, status marks, cursors, and interface icons,
 - music, ambience, voice, and event cues when audio is in scope.
 
-These are discovery aids, not a universal enum. Add the profile required by the
-host and intended work. A map graphic belongs here; collision, topology, warps,
-and reachability do not. A battle sprite belongs here; hitboxes, AI, damage, and
-timing behavior do not.
+These are discovery aids; add the profile the host and intended work require.
+Map graphics and battle sprites belong here, while collision, topology, warps,
+reachability, hitboxes, AI, damage, and timing belong to their domains.
 
 ## Separate Semantic And Physical Relations
 
 Semantic relations describe meaning: preserve, variant, retarget, merge, split,
 substitute, remix, or newly author. Physical host binding describes how a
 proven surface is reused, replaced, repurposed, extended, inserted, or hooked.
-Do not derive one from the other.
+Decide each on its own evidence.
 
 One character may map to field sprites, portraits, battle graphics, cutscene
 frames, and UI icons. Several source assets may merge into one host sheet, and
@@ -60,11 +59,11 @@ rest of the set without proving its coverage or approving unseen results.
 
 ## Hard Stops
 
-- Keep unknown animation, pose, expression, state, or surface relationships as
+- Unknown animation, pose, expression, state, or surface relationships stay
   explicit gaps.
-- Reject a catalog that identifies only files without their semantic role.
-- Reject a semantic map that embeds palette or byte-write decisions.
-- Reject an apparently complete character or location when a required surface
-  or state has no mapped representation.
-- Reject asset work that silently changes narrative facts, map behavior,
-  combat behavior, or interface actions outside its authority.
+- Every catalog entry names its semantic role.
+- Palette and byte-write decisions live in structure and execution records.
+- A character or location is complete when every required surface and state has
+  a mapped representation.
+- Changes to narrative facts, map behavior, combat behavior, or interface
+  actions go to their owning domain.

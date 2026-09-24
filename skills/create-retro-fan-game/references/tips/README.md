@@ -1,15 +1,14 @@
 # Case Index
 
-This index keeps failures and counterexamples that were expensive to discover in
-real fan-game projects. Search it by the direct observation, such as a rejected
-candidate, a reference that looks original, or evidence that disagrees with a
-record, before searching by a suspected cause. A case suggests another
-interpretation; it does not prescribe a repair or decide completion.
+This index keeps misleading observations that are expensive to rediscover.
+Search it by the direct observation, such as a rejected candidate, a reference
+that looks original, or evidence that disagrees with a record, before searching
+by a suspected cause. A case suggests another interpretation; it does not
+prescribe a repair or decide completion.
 
-Each case states its observed scope and transfer limit. Re-establish its
-conclusion for the current game and inputs before relying on it. Add a case only
-when it changes a future decision and has recorded evidence; do not turn one
-game's measurements into universal rules.
+Re-establish a case's conclusion for the current game and inputs before relying
+on it. Add a case when it changes a future decision, scoped to what was
+measured.
 
 ## General Cases
 
@@ -20,6 +19,7 @@ game's measurements into universal rules.
 
 ## Case Format
 
-Title the file by the reusable conclusion. Record **Search terms**, **Observed
-scope**, **Failure context**, **Evidence**, **Established result**, **Transfer
+Title the file by the reusable conclusion. Record **Search terms**, **Misleading
+observation**, **Other interpretation**, **Distinguishing check**, **Transfer
 limit**, and **Related criteria** linking the governing reference sections.
+Describe the situation generically so it applies to any game.

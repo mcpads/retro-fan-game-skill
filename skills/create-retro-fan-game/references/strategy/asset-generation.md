@@ -1,48 +1,45 @@
 # Asset Generation
 
-Generated and newly authored assets are candidate creative inputs, not proof of
-engine compatibility. Use them only inside a declared overlay and preserve
-their origin separately from extracted original material.
+Generated and newly authored assets are candidates for a segment. Keep their
+origin separate from extracted original material.
 
-## Decision Rules
+## Before Making
 
-- Classify the target surface and its proven runtime constraints before binding
-  an asset to production. Provisional creative samples may precede that proof;
-  bounded format experiments follow [Workflow Gates](workflow-gates.md#experimental-work).
-- Generate or author outside the immutable extraction tree.
-- When several assets must express one entity, place, item, state, or cue across
-  multiple surfaces, require a semantic asset handoff rather than inferring
-  coherence from matching files or prompts.
-- Convert deterministically to the target format and validate every measured
-  budget before insertion or replacement.
-- If no existing slot can express the asset safely, evaluate
-  [Resource Insertion](resource-insertion.md) rather than assuming storage alone
-  makes insertion possible.
-- Establish the origin of every reference before generating or drawing from it
-  under [Reference Identity](creative-review.md#reference-identity).
-- Present candidates for the person's judgment under
-  [Creative Review](creative-review.md).
-- Observe the asset through the actual game-consumption path before promoting a
-  runtime claim.
+- Establish what the surface tells the player and what drives it. A face may be
+  a health indicator rather than an expressive portrait; count the states the
+  surface shows in play.
+- For a replaced animation, record what each original frame shows: facing,
+  hidden parts, gaze, hand action, and the move it depicts. Generators drift
+  toward front-facing, readable poses, so check candidates against this record.
+- Identify an original asset through the code or event that selects it. Look for
+  existing original assets that fit the surface before generating.
+- Record each reference's origin under
+  [Reference Identity](creative-review.md#reference-identity).
+- Provisional samples may come before the surface's constraints are proven;
+  format experiments follow [Workflow Gates](workflow-gates.md#experimental-work).
 
-Use [Creative Artifact States](../conventions/artifact-states.md) for provenance and state fields,
-and [Asset Distribution Policy](asset-distribution-policy.md) for shareability
-classification.
+## Making And Binding
 
-## External-service Boundary
+- Author outside the immutable extraction tree.
+- Cross-surface identity, source conformance, map or combat behavior, and
+  narrative meaning are decided through their
+  [domain handoffs](composition.md#optional-domain-capability-handoffs), such as
+  asset coherence when several assets express one entity, place, item, state,
+  or cue.
+- Convert deterministically and validate every measured budget, including
+  engine state the asset shares: palettes, video memory, cursor or font tiles,
+  and duplicated tables that restore or redraw it.
+- When no existing slot can hold the asset, evaluate
+  [Resource Insertion](resource-insertion.md).
+- Present candidates under [Creative Review](creative-review.md), and observe
+  the adopted asset through the game's consumption path in its segment.
 
-Do not send original game images or extracted original assets to an external
-generator. Provide only the minimum creative brief and independently described
-constraints needed for the candidate asset. A generated result must not be used
-to infer unmeasured engine limits.
+Record provenance and states in
+[Creative Artifact States](../conventions/artifact-states.md), and sharing class
+under [Asset Distribution Policy](asset-distribution-policy.md).
 
-## Hard Stops
+## External Generators
 
-- Reject assets that look plausible but fail binary, palette, tile, memory,
-  timing, audio, compression, or route-state constraints.
-- Do not silently treat generated resemblance as permission to redistribute an
-  original or derived asset.
-- Promote asset states only under
-  [Creative Artifact States](../conventions/artifact-states.md#state-axes).
-- Do not let this generation path decide cross-surface identity, source
-  conformance, map behavior, combat behavior, or narrative meaning.
+Send an external generator only the creative brief and independently described
+constraints; original images and extracted assets stay local. Engine limits
+come from measurement.

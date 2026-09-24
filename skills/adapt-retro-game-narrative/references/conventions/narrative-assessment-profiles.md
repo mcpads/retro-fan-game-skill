@@ -17,15 +17,14 @@ sample or proof of concept, check the proposed scope and its dependencies:
   or a human decision,
 - planned units and derivation relations cover that scope,
 - required host bindings and domain dependencies are identified,
-- no comparison source or execution host was silently promoted to narrative
-  authority.
+- narrative authority rests only on sources assigned that role.
 
 Record `pass`, `fail`, or `inconclusive`, scope, evidence references, limits,
 and blocked downstream decisions.
 Unresolved alternatives may remain only where they cannot invalidate the proposed
 expansion. Provisional samples and isolated in-game experiments may resolve these
-gaps before readiness passes, under the project's experimental execution checks.
-They do not establish readiness for broader production or waive completion claims.
+gaps before readiness passes, under the project's experimental execution checks;
+readiness and completion still need their own evidence.
 
 ## Conformance Profile
 

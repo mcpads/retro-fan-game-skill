@@ -1,8 +1,8 @@
 # Narrative-plan Fields
 
 The narrative plan owns what the authored playable work says. It refers to
-source records but does not redefine them, and it remains independent of where
-the execution host stores or displays the unit.
+source records and stays independent of where the host stores or displays each
+unit.
 
 ## Authored Narrative Unit
 
@@ -20,8 +20,7 @@ Record:
 - required presentation or asset meanings by requirement ID,
 - human approval references and unresolved questions.
 
-An authored unit may be wholly new. Do not fabricate a source entry merely to
-give it provenance.
+An authored unit may be wholly new, with zero source entries.
 
 ## Derivation Relation
 
@@ -40,7 +39,5 @@ Record:
 
 Allow zero source entries for new or continuation units and zero authored units
 for explicit omission. Many-to-many relations are required for merge, split,
-and synthesis.
-
-Do not include host bytes, target asset hashes, build status, runtime results,
-or a final conformance verdict. Point to their owning records.
+and synthesis. Host data, build status, runtime results, and verdicts stay in
+their owning records.

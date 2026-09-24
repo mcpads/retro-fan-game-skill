@@ -1,61 +1,61 @@
 # Runtime Observation
 
-Runtime observation answers claims about what the game actually consumed,
-displayed, played, or did. Define the observable from the claim and then choose
-any manual, interactive, automated, or combined observer capable of producing
-sufficient evidence under [Capability Composition](composition.md).
-This is runtime verification under [Work Roles](../conventions/work-roles.md),
-including when a test runner collects the observations.
+Runtime observation shows what the game actually consumed, displayed, played, or
+did in a segment. Define the observable from the claim, then choose a manual,
+interactive, or automated observer that can produce it under
+[Capability Composition](composition.md).
 
 ## Evidence Selection
 
-- Use static and execution evidence for claims about encoding, budgets,
-  deterministic transforms, or expected writes.
-- Use the real game-consumption path for visibility, state, timing, audio,
-  route, save/load, and playability claims.
-- Use human observation for aesthetic or semantic judgments that cannot be
-  reduced to a deterministic predicate, while preserving the route and result.
-- A successful connection or command is sufficient only when connectivity or
-  command execution is the declared claim.
+- Static and execution evidence covers encoding, budgets, deterministic
+  transforms, and expected writes.
+- The real game path covers visibility, state, timing, audio, route, save/load,
+  and playability.
+- Aesthetic and semantic judgments belong to the person under
+  [Creative Review](creative-review.md), shown on a preserved route.
+- A successful connection or command covers connectivity or command execution.
 
-Use [Observation Records](../conventions/observation-records.md) for collection
-and [Claim Assessments](../conventions/claim-assessments.md) for interpretation.
-Verify the loaded output against its build receipt when collecting evidence.
-For reuse across builds, apply
-[Evidence From Another Build](../conventions/claim-assessments.md#evidence-from-another-build).
+Record collection in [Observation Records](../conventions/observation-records.md)
+and interpretation in [Claim Assessments](../conventions/claim-assessments.md),
+and check the loaded output against its build receipt.
 
 ## Coverage Judgment
 
-Observe each changed surface on the intended route, any inserted resource
-through its loader path, relevant save/load or story-state transitions, and an
-adjacent unchanged path when shared tables, archives, caches, or engine logic
-could regress. Units that share one proven consumer path, such as lines in one
-dialogue table, may be covered by representative observation plus static checks
-of every unit when the assessment records the evidence of shared membership.
-Units with a different path, state, or presentation need their own observation. Select traces or memory measurements only when the claim needs
-them; screenshots alone do not prove hidden state, and traces alone do not prove
-human-visible output.
+Observe each changed surface in its segment, inserted resources through their
+loader, relevant save/load and story-state transitions, and an adjacent unchanged
+path where shared tables, archives, caches, or engine logic could regress. Units
+on one proven consumer path, such as lines in one dialogue table, may share a
+representative observation plus static checks of every unit; units with a
+different path, state, or presentation get their own. Screenshots show visible
+output and traces show hidden state; choose what the claim needs.
+
+## Observation Limits
+
+- Judge visuals from frames captured after the display settles, and record the
+  frame timing.
+- Record the channels the observer watched; findings cover those channels, and
+  a check that exercised zero cases has not run.
+- Record every intervention, such as memory writes, teleports, forced
+  encounters, debug patches, or state restores, and what it leaves unproven.
+  Keep debug patches in throwaway copies and the natural-path claim open.
+- Before relying on repeated emulator state restores, show that a restore
+  reproduces the baseline, and suspect the tool when behavior turns odd after
+  restores. Record a starting state taken from another build as such, with what
+  it leaves unestablished for the selected build. Prove persistence with the
+  game's own save and a power cycle, and reproduce runs as input replays from a
+  new game.
 
 ## Issue Loop
 
-1. Reproduce from the declared local inputs and starting state.
-2. Identify the affected surface and last passing dependency gate.
+1. Reproduce from the declared inputs and starting state.
+2. Compare the same view or state on the unmodified build, and find the last
+   passing gate for the affected surface.
 3. Separate structure, content, execution, runtime-state, and observation
    explanations.
 4. Fix the smallest confirmed cause.
 5. Add the failed claim to repeatable coverage when feasible.
 
-Retain evidence that rules out a suspected cause. When a starting state comes
-from another build, record that it did and what the state cannot establish for
-the selected build. Adopt a workaround only when
-evidence supports its safety for the affected behavior.
-
-For a costly failure worth reusing, preserve the symptom, triggering input and
-scope, misleading evidence, confirmed cause, corrective check, and proof limits
-in the project's existing case or issue record. Keep the current fix selected
-through [Project State](../conventions/project-state.md). Retain cases that change
-a future decision; do not turn one game's measurements into universal rules.
-
-## Completion Role
-
-Evaluate personal and shareable completion under [Workflow Gates](workflow-gates.md).
+Keep evidence that rules out a suspected cause. For a costly failure, record the
+symptom, trigger, misleading evidence, cause, and corrective check in the
+project's issue record, and keep the fix selected in the
+[current entry](../conventions/project-state.md).

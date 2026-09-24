@@ -1,84 +1,57 @@
 # Project State
 
-Keep one stable entry for current work in an existing status page, manifest,
-issue, or record section. It identifies selected results and how to resume;
-no particular filename or new tracking system is required.
+Keep one current entry in an existing status page or record section. It says
+which segment is in progress and how to resume. A new project starts with this
+entry alone and adds other records as its decisions need them.
 
 ## Current Entry
 
-Keep only the information needed to resume:
+Keep:
 
-- intended playable route and completion target, with decision references,
-- selected structure, creative plan, content, and transform revisions,
-- selected build receipt and output identity, if a build has been selected,
-- applicable assessment references and unresolved blockers,
-- work in progress, the next action, and the question it will resolve,
-- last verified time and references to the records checked.
+- the intended route, its segments, and the completion target,
+- the segment in progress and what it still lacks,
+- selected content, transform, and build identities,
+- open placeholders, blockers, and pending decisions,
+- the next action and the question it resolves,
+- when it was last verified, against which records.
 
-Reference records without copying their evidence or assigning new verdicts.
-Keep unit IDs stable, but pin revisions or hashes for content-dependent execution
-and assessments. A stable ID alone cannot identify changed content. Use existing
-revision mechanisms, such as Git, without inventing release numbers.
-
-Update the same entry when selection, dependencies, or the next action changes.
-Keep history in run records or the journal, not dated copies of current state.
-A temporary handoff must not be the sole source of current state.
+Point to records rather than copying their evidence. Pin revisions or hashes for
+content-dependent work; Git serves as the revision mechanism. Update this entry
+in place and keep history in run records or the journal.
 
 ## Resume From Evidence
 
-Read the entry and its referenced records before old logs. Verify selected input
-and output identities and the assessments' applicability to those contents and
-the intended route. Inspect unfinished work before duplicating a run or
-overwriting its outputs.
-
-Reconstruct a missing or stale entry from explicit decisions, receipts, and
-evidence. Recency, filenames, and historical success do not establish current
-selection. Record uncertainty, perform the smallest check that resolves it, and
-resume the next decision without repeating valid work to rebuild chat memory.
+Read the entry and the records it references before old logs. Verify the
+selected inputs and outputs and whether the referenced assessments still apply.
+Inspect unfinished runs before repeating or overwriting them. Rebuild a missing
+or stale entry from explicit decisions, receipts, and evidence; recency and
+filenames do not show what was selected.
 
 ## Research, Experiments, And Adopted Work
 
-Keep each kind of material distinguishable within the existing project layout:
-
 | Role | Use |
 | --- | --- |
-| Research and hypotheses | Explain possible structures and source meanings; not authoritative build rules |
-| Experimental code and outputs | Test a bounded question; not selected product inputs by default |
-| Adopted facts, content, and transforms | Explicit inputs to the reproducible product build, with supporting evidence |
-| Raw evidence and historical runs | Preserve what happened for exact inputs, even when an interpretation is later rejected |
+| Research and hypotheses | Explain possible structures and meanings |
+| Experimental code and outputs | Answer a bounded question |
+| Adopted facts, content, and transforms | Inputs to the product build, with supporting evidence |
+| Raw evidence and historical runs | What happened for exact inputs |
 
-Adoption means selecting a result for product use. Record its exact contents,
-supporting assessment, scope, limits, and what it replaces. The agent decides
-technical adoption unless it crosses the creative boundary in
-[Intent And Authority](../strategy/intent-and-authority.md).
-Reuse experimental code in place when suitable; adoption requires no copy.
-
-Selecting a finding does not select its discovery procedure. Adopt a procedure
-for recurring product use only when it supplies a required deterministic transform
-or mechanical check, with declared inputs, outputs, and failure behavior under the
-[Product Build Path](execution-records.md#product-build-path).
-Preserve adopted analysis or generation results and provenance. Do not scan old
-experiments for inputs, rerun exploratory analysis or creative generation on each
-build, or depend on a transient cache.
+Adoption selects a result for product use; record its contents, supporting
+assessment, scope, and what it replaces. The agent adopts technical results
+unless they cross the creative boundary in
+[Intent And Authority](../strategy/intent-and-authority.md). Adopt a procedure
+for recurring use only when the build needs it as a deterministic transform or
+check; otherwise keep the adopted result and its provenance, and let the build
+read that.
 
 ## Invalidation
 
-When evidence or intent changes, follow dependencies to affected facts, product builds,
-and assessments. Mark conclusions that no longer apply as invalid before further
-adoption or completion decisions; preserve unrelated proof.
-Applying runtime evidence to a different build requires the scoped comparison in
-[Claim Assessments](claim-assessments.md#evidence-from-another-build).
-
-Retain raw observations and historical outcomes. Correct or supersede the fact or
-assessment, record the reason and any replacement, then update the current entry
-and affected statuses together. A historical pass covers its original scope.
-Unresolved conflicting evidence keeps a claim open; do not hide it with an older
-pass.
+When evidence or intent changes, follow dependencies to affected facts, builds,
+and assessments, and mark those that no longer apply before further adoption or
+completion. Keep raw observations and historical outcomes; a historical pass
+covers its original scope. Update the current entry and affected states
+together. Conflicting evidence keeps a claim open.
 
 For example, a corrected compression rule invalidates builds that used the old
-compressor and claims depending on its validity. Their captures remain useful
-evidence of those runs. An unrelated approved scene need not be reapproved.
-
-Use existing automated checks to reject missing references, identity mismatches,
-and completion statuses based on invalidated assessments where possible. Valid
-references alone do not establish creative quality or playability.
+compressor and claims resting on them, while an unrelated approved scene stays
+approved.

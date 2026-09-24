@@ -1,55 +1,50 @@
 # Resource Insertion
 
-Resource insertion adds something the base does not expose as a replaceable
-slot. Storage space alone does not establish that the game can discover and
-consume it.
+Resource insertion adds something the base has no replaceable slot for. The game
+must discover and consume it, which storage space alone does not show.
 
 ## Choose A Method For The Intended Work
 
 Compare reuse or repurposing, table or archive extension, relocation to free or
-appended storage, additional entries, and loader hooks as applicable. Prefer the
-method with fewer unproven dependencies when it preserves the intended work.
-This is not a mandatory sequence of implementations to attempt.
-
-Do not overwrite required original content to avoid insertion, or insert merely
-for authoring convenience. Investigate the actual content loss and runtime risks.
-Return a consequential creative tradeoff under
-[Intent And Authority](intent-and-authority.md); select technical means within
-that decision autonomously.
+appended storage, additional entries, and loader hooks as they apply, and prefer
+the method with fewer unproven dependencies that still delivers the intended
+work. Insert when the intended work needs a new resource, and keep required
+original content intact; when reuse would overwrite content the person may
+want, return that tradeoff under [Intent And Authority](intent-and-authority.md).
 
 ## Investigate The Runtime Asset Chain
 
-Map the relevant chain, marking measured links and unknowns:
+Map the chain, marking measured links and unknowns:
 
 `storage -> discovery -> load or transform -> residence -> consumption -> retirement`
 
-Cover the owning table or lookup, identities and counts, format and media rules,
-memory destination and lifetime, failure behavior, and adjacent resources that
-could shift or be shadowed. Records belong to
-[Structure-map Fields](../conventions/structure-map-fields.md#conditional-inserted-resource-record).
-An unknown link is a bounded investigation target, not a guessed production rule.
+Cover the owning table or lookup, identities and counts, format rules, memory
+destination and lifetime, failure behavior, and adjacent resources that could
+shift or be shadowed. Record it in the
+[inserted-resource record](../conventions/structure-map-fields.md#conditional-inserted-resource-record).
+Each unknown link is a bounded investigation target.
 
 ## Minimal Insertion Experiment
 
-Use [Experimental Work](workflow-gates.md#experimental-work) to admit one small
-observable insertion. The experiment may establish the previously unknown discovery,
-load, or retirement behavior; the complete runtime chain need not be proven
-before this isolated experiment.
+Admit one small observable insertion under
+[Experimental Work](workflow-gates.md#experimental-work); it may itself establish
+the unknown discovery, load, or retirement behavior. Observe the new resource and
+an adjacent old one through the real consumption path, including cache,
+fallback, and retirement, and choose the next experiment from the links still
+open.
 
-Observe the new resource and a relevant adjacent old resource through the real
-consumption path, including affected cache, fallback, and retirement behavior.
-A successful write or one displayed frame cannot cover unobserved lifetime or
-state dependencies. Keep ambiguous links open and choose the next experiment
-from their missing evidence.
+## Persistent State
+
+New saved state is an insertion into the save format. Establish the ownership
+and lifetime of existing flags before taking one that looks unused. Test new
+game, load, copy, delete, and a corrupt record, seeding non-default values so a
+pass reflects the new state. State what each value means, and decide corruption
+recovery before it gates anything the player would lose. Append fields to keep
+the layout stable, and refuse incompatible saves while keeping them intact.
 
 ## Promotion
 
-The insertion PoC supports production expansion only when the affected chain and
-adjacent behavior have sufficient evidence under
-[Workflow Gates](workflow-gates.md#creative-unit-poc-gate). Scope that evidence to
-the tested loader, resource type, and relevant states; do not generalize it to
-unrelated resources.
-
-When sharing is in scope, apply
-[Asset Distribution Policy](asset-distribution-policy.md) to the inserted material
-and its containing archive.
+The insertion PoC supports expansion once the affected chain and adjacent
+behavior have evidence under
+[Workflow Gates](workflow-gates.md#creative-unit-poc-gate), scoped to the tested
+loader, resource type, and states.

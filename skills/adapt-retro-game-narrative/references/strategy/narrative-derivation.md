@@ -1,9 +1,8 @@
 # Narrative Derivation
 
 Use narrative derivation when an existing story, edition, or canon constrains
-multiple authored units. The goal is not always fidelity. The goal is to make
-the chosen relationship to each source explicit enough to approve, build, and
-assess without silently mixing authorities.
+multiple authored units. The goal is to make the chosen relationship to each
+source, faithful or not, explicit enough to approve, build, and assess.
 
 ## Scoped Source Roles
 
@@ -18,16 +17,14 @@ Assign roles per claim or unit, not once for the whole project:
 | Execution host | Owns playable surfaces and engine constraints, not source meaning |
 
 Record explicit precedence or a human conflict decision when authorities
-overlap. A later edition, technical host, or more complete script is not
-automatically superior.
+overlap; precedence comes from that record rather than recency or completeness.
 
 ## Unit-level Relations
 
 Describe the intended relation at the authored-unit level. Relations may
 include preservation, retelling, compression, split, merge, substitution,
 recontextualization, divergence, continuation, restoration, synthesis,
-constraint-only use, or original creation. Treat these as descriptive
-relations, not one project-wide mode enum.
+constraint-only use, or original creation. Choose them per unit.
 
 The relation determines which assessment dimensions apply:
 
@@ -60,21 +57,21 @@ The readiness profile also defines how provisional work may resolve gaps.
 ## Review Meaning In Context
 
 When a material narrative choice remains open, show the relevant source context,
-a short authored alternative, and its causal consequences for the route. Label
-invention and uncertain reconstruction. Present only alternatives that illuminate
-the person's actual decision; do not make them select a host-event mapping.
+a short authored alternative, and its causal consequences for the route, in the
+segment where the player meets it. Label invention and uncertain reconstruction.
+Present alternatives that illuminate the person's decision; host-event mapping
+is the agent's work.
 
 Apply the project's existing creative decisions to the sample. Reopen only the
 meaning or tradeoff that is unresolved or changed. Approval of a divergence sets
-the intended relation; it does not remove the need to assess coherent consequences
-or review newly authored content within the agreed scope.
+the intended relation; its consequences are still assessed and new content still
+reviewed within the agreed scope.
 
 ## Hard Stops
 
-- Preserve conflicting or incomplete source evidence as an open question.
-- Reject edition mixing that lacks a scoped authority or approved synthesis
-  decision.
-- Reject a mapping that skips the authored narrative layer.
-- Reject fidelity criteria that punish an approved divergence for being a
-  divergence.
-- Reject host or asset constraints presented as evidence of source meaning.
+- Conflicting or incomplete source evidence stays an open question.
+- Mixing editions requires a scoped authority or approved synthesis decision.
+- Host bindings map from authored narrative units.
+- An approved divergence is assessed against its declared relation.
+- Source meaning comes from source evidence; host and asset constraints limit
+  the implementation.
