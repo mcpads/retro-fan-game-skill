@@ -55,6 +55,8 @@ or the person revises it. Explain what changed. Use
 
 Present the changed experience in context. Ask whether a voice fits or a loss is
 acceptable; perform technical investigation and mechanical checks yourself.
+Prepare art, sound, and text candidates under
+[Creative Review](creative-review.md).
 
 If available tools cannot provide the needed observation, seek another method.
 When human observation is necessary, provide a short route and a specific result

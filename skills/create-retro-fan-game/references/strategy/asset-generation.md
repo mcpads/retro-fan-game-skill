@@ -18,6 +18,10 @@ their origin separately from extracted original material.
 - If no existing slot can express the asset safely, evaluate
   [Resource Insertion](resource-insertion.md) rather than assuming storage alone
   makes insertion possible.
+- Establish the origin of every reference before generating or drawing from it
+  under [Reference Identity](creative-review.md#reference-identity).
+- Present candidates for the person's judgment under
+  [Creative Review](creative-review.md).
 - Observe the asset through the actual game-consumption path before promoting a
   runtime claim.
 

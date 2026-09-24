@@ -65,7 +65,8 @@ Proof of a rebuilt container alone does not prove its changed runtime behavior.
 ## Creative-unit PoC Gate
 
 PoC means proof of concept: one changed unit demonstrates the intended behavior.
-Pass when one minimal changed line, scene, asset, rule, cue, or route branch:
+Pass when one minimal changed line, scene, asset, rule, cue, or route branch,
+exercised inside its play segment:
 
 - has relevant surface proof and builds from the verified inputs with the
   applicable execution checks passing,
@@ -106,12 +107,18 @@ Complete the work for its intended personal route only when:
 - applicable specialized completion claims have scoped passing assessments,
 - every changed surface on that route has sufficient game-visible evidence
   applicable to the selected build under
-  [Claim Assessments](../conventions/claim-assessments.md#evidence-from-another-build), and
+  [Claim Assessments](../conventions/claim-assessments.md#evidence-from-another-build),
+- the route has been played continuously on the selected build from its declared
+  start to its end, including transitions between segments, required branches,
+  and save/load resumption,
+- no placeholder remains on the route unless the person accepted it as final, and
 - known critical runtime, story-state, save/load, route, and required-asset issues
   are zero for that route.
 
 An invalidated or mismatched assessment cannot support completion. Unobserved
-changed routes remain open. Distribution checks are not part of personal
+changed routes remain open. Segment observations, even when applicable to the
+selected build, do not establish the transitions a continuous playthrough
+covers. Distribution checks are not part of personal
 completion; the person may stop here with a complete work.
 
 ## Shareable Candidate Gate

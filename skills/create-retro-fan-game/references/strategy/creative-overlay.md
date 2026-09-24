@@ -4,6 +4,21 @@ A creative overlay is the set of changes applied to a verified game: dialogue,
 scenarios, routes, interface text, audiovisual assets, or rules. Establish an
 unclear target with [Intent And Authority](intent-and-authority.md).
 
+## Play Segments
+
+A play segment is the playable unit that components serve. For each segment,
+define the place, the player's purpose, the interactions and information that
+open the way, dialogue and expression before and after, success and failure
+conditions, the connection to adjacent segments, and behavior after save,
+reload, revisit, and retry. Bind components and host surfaces through the
+segments that consume them; an asset or table enters production when a segment
+needs it.
+
+Keep source scenes, new play segments, and host bindings as separate records.
+A source's order or unresolved gaps do not become execution order by default.
+Prove the first segment end to end before expanding; later segments reuse its
+proven foundation instead of reopening it.
+
 ## Component Graph
 
 Define components by their creative purpose, relationship to source material,
@@ -19,10 +34,13 @@ another or require every component to share the same source.
 ## Scope Judgment
 
 - Link each unit intended for the build to a stable structure identity.
-- State the intended personal route and the surfaces allowed to change.
+- State the intended personal route, its segments, and the surfaces allowed to
+  change.
 - Preserve control, state, and runtime requirements beside the creative intent.
 - Prefer changes with fewer affected dependencies when they preserve the intended
   experience; investigate broader changes when the target requires them.
+- Reuse host content where the person accepts it, and mark stand-ins under
+  [Placeholders](../conventions/artifact-states.md#placeholders).
 - Use specialized assessments only where needed, following
   [Capability Composition](composition.md#optional-domain-capability-handoffs).
 

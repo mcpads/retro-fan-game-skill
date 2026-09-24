@@ -15,10 +15,13 @@ For the intended playable route, record:
 - each component's semantic source relationship and target host-surface IDs,
 - dependencies between components,
 - approval boundary and completion claims,
-- specialized assessment references when required, and current blockers.
+- specialized assessment references when required.
 
 Define each component's relationship to its sources under
-[Creative Overlay](../strategy/creative-overlay.md#component-graph).
+[Creative Overlay](../strategy/creative-overlay.md#component-graph). The scope
+record holds what was decided; current status and blockers belong to the
+current entry under [Project State](project-state.md), so the scope record does
+not go stale as work advances.
 
 ## Capability Handoff Record
 
@@ -74,8 +77,10 @@ just to fill these fields.
 
 ## State Axes
 
-Track production units with these axes when applicable. A provisional sample
-does not need build or observation records before anyone can review it.
+Track creative, build, observation, and issue state as separate axes. A project
+may use its own labels, but each axis must stay decidable on its own; do not fold
+several axes into one label. A provisional sample does not need build or
+observation records before anyone can review it. Default labels:
 
 | Axis | Values | Meaning |
 | --- | --- | --- |
@@ -91,11 +96,22 @@ from its assessment and reset outdated statuses under
 [Project State](project-state.md#invalidation). Product completion follows
 [Workflow Gates](../strategy/workflow-gates.md).
 
+## Placeholders
+
+A placeholder stands in for intended content so connection and progression can
+be built and observed early. Record what it replaces, the intended final content,
+and the claims it cannot support. It may be build-valid and observed; its
+creative state stays provisional until it is replaced or the person accepts it
+as final. Renaming, recoloring, or relabeling a placeholder does not complete the
+unit. Report open placeholders with the route status.
+
 ## Authored Or Generated Asset Provenance
 
 When an asset is newly authored or generated, record:
 
 - source class and human source note or generation prompt reference,
+- identity and origin of each style, pose, or sound reference under
+  [Reference Identity](../strategy/creative-review.md#reference-identity),
 - author, generator capability, or model identity when relevant,
 - rights or usage assumption,
 - source and converted artifact hashes,

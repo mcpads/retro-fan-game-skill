@@ -29,7 +29,10 @@ For reuse across builds, apply
 Observe each changed surface on the intended route, any inserted resource
 through its loader path, relevant save/load or story-state transitions, and an
 adjacent unchanged path when shared tables, archives, caches, or engine logic
-could regress. Select traces or memory measurements only when the claim needs
+could regress. Units that share one proven consumer path, such as lines in one
+dialogue table, may be covered by representative observation plus static checks
+of every unit when the assessment records the evidence of shared membership.
+Units with a different path, state, or presentation need their own observation. Select traces or memory measurements only when the claim needs
 them; screenshots alone do not prove hidden state, and traces alone do not prove
 human-visible output.
 
@@ -42,7 +45,9 @@ human-visible output.
 4. Fix the smallest confirmed cause.
 5. Add the failed claim to repeatable coverage when feasible.
 
-Retain evidence that rules out a suspected cause. Adopt a workaround only when
+Retain evidence that rules out a suspected cause. When a starting state comes
+from another build, record that it did and what the state cannot establish for
+the selected build. Adopt a workaround only when
 evidence supports its safety for the affected behavior.
 
 For a costly failure worth reusing, preserve the symptom, triggering input and
